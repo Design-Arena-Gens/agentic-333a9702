@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Mémoire - Architecture des Ordinateurs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Architecture des Ordinateurs</h1>
+            <nav class="top-nav">
+                <a href="index.html">Accueil</a>
+                <a href="ordinateur.html">Qu'est-ce qu'un ordinateur ?</a>
+                <a href="von-neumann.html">Architecture de von Neumann</a>
+                <a href="cpu.html">Le CPU</a>
+                <a href="memoire.html">La Mémoire</a>
+                <a href="stockage.html">Stockage</a>
+                <a href="bus.html">Bus et Communication</a>
+                <a href="entree-sortie.html">Entrée/Sortie</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="side-nav">
+            <a href="index.html" class="nav-button">
+                <span class="icon">🏠</span>
+                <span>Accueil</span>
+            </a>
+            <a href="ordinateur.html" class="nav-button">
+                <span class="icon">💻</span>
+                <span>Qu'est-ce qu'un ordinateur ?</span>
+            </a>
+            <a href="von-neumann.html" class="nav-button">
+                <span class="icon">🏗️</span>
+                <span>Architecture de von Neumann</span>
+            </a>
+            <a href="cpu.html" class="nav-button">
+                <span class="icon">⚡</span>
+                <span>Le CPU</span>
+            </a>
+            <a href="memoire.html" class="nav-button active">
+                <span class="icon">💾</span>
+                <span>La Mémoire</span>
+            </a>
+            <a href="stockage.html" class="nav-button">
+                <span class="icon">💿</span>
+                <span>Stockage</span>
+            </a>
+            <a href="bus.html" class="nav-button">
+                <span class="icon">🔌</span>
+                <span>Bus et Communication</span>
+            </a>
+            <a href="entree-sortie.html" class="nav-button">
+                <span class="icon">⌨️</span>
+                <span>Entrée/Sortie</span>
+            </a>
+            <a href="contact.html" class="nav-button">
+                <span class="icon">📧</span>
+                <span>Contact</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <article class="content-article">
+            <h2>La Mémoire</h2>
+
+            <section class="content-section">
+                <h3>Introduction</h3>
+                <p>La <strong>mémoire</strong> est un composant essentiel de tout ordinateur. Elle permet de stocker temporairement ou de façon permanente les données et les instructions nécessaires au fonctionnement du système. Sans mémoire, le CPU ne pourrait pas travailler efficacement.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Principe clé :</strong> Plus une mémoire est rapide, plus elle est coûteuse et plus sa capacité est limitée. D'où l'importance de la hiérarchie mémoire.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>La hiérarchie mémoire</h3>
+                <p>Les ordinateurs utilisent plusieurs niveaux de mémoire, organisés en pyramide selon leur vitesse et leur capacité :</p>
+
+                <div class="memory-pyramid">
+                    <div class="pyramid-level level-1">
+                        <div class="level-content">
+                            <h4>Registres CPU</h4>
+                            <p>⚡ Plus rapide | 💾 Quelques octets</p>
+                        </div>
+                    </div>
+                    <div class="pyramid-level level-2">
+                        <div class="level-content">
+                            <h4>Cache L1</h4>
+                            <p>⚡⚡ Très rapide | 💾 32-64 KB</p>
+                        </div>
+                    </div>
+                    <div class="pyramid-level level-3">
+                        <div class="level-content">
+                            <h4>Cache L2</h4>
+                            <p>⚡⚡⚡ Rapide | 💾 256 KB - 1 MB</p>
+                        </div>
+                    </div>
+                    <div class="pyramid-level level-4">
+                        <div class="level-content">
+                            <h4>Cache L3</h4>
+                            <p>⚡⚡⚡⚡ Assez rapide | 💾 8-64 MB</p>
+                        </div>
+                    </div>
+                    <div class="pyramid-level level-5">
+                        <div class="level-content">
+                            <h4>RAM (Mémoire vive)</h4>
+                            <p>⚡⚡⚡⚡⚡ Moyenne | 💾 8-128 GB</p>
+                        </div>
+                    </div>
+                    <div class="pyramid-level level-6">
+                        <div class="level-content">
+                            <h4>Stockage (SSD/HDD)</h4>
+                            <p>⚡⚡⚡⚡⚡⚡ Plus lent | 💾 500 GB - 4 TB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pyramid-legend">
+                    <p><strong>↑ Vitesse</strong> : Plus rapide en haut</p>
+                    <p><strong>↓ Capacité</strong> : Plus grande en bas</p>
+                    <p><strong>↓ Coût/GB</strong> : Plus cher en haut</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Les registres</h3>
+                <p>Les <strong>registres</strong> sont de petites mémoires ultra-rapides intégrées directement dans le CPU.</p>
+
+                <div class="register-types">
+                    <div class="register-card">
+                        <h4>📍 Registres spécialisés</h4>
+                        <ul>
+                            <li><strong>PC (Program Counter) :</strong> Adresse de la prochaine instruction</li>
+                            <li><strong>IR (Instruction Register) :</strong> Instruction en cours d'exécution</li>
+                            <li><strong>MAR (Memory Address Register) :</strong> Adresse mémoire à accéder</li>
+                            <li><strong>MDR (Memory Data Register) :</strong> Données lues/écrites</li>
+                            <li><strong>SP (Stack Pointer) :</strong> Sommet de la pile</li>
+                            <li><strong>Registre d'état (flags) :</strong> Résultats des opérations</li>
+                        </ul>
+                    </div>
+
+                    <div class="register-card">
+                        <h4>🔢 Registres généraux</h4>
+                        <p>Utilisés pour stocker temporairement :</p>
+                        <ul>
+                            <li>Opérandes de calculs</li>
+                            <li>Résultats intermédiaires</li>
+                            <li>Adresses de données</li>
+                            <li>Variables locales</li>
+                        </ul>
+                        <p><strong>Exemples :</strong> RAX, RBX, RCX, RDX (x86-64)</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Vitesse :</strong> Accès en 1 cycle d'horloge (~0,2-0,3 ns à 3-4 GHz)</p>
+                    <p><strong>Taille :</strong> 32 ou 64 bits par registre, quelques dizaines de registres</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>La mémoire cache</h3>
+                <p>Le <strong>cache</strong> est une mémoire rapide située entre le CPU et la RAM, utilisée pour stocker les données fréquemment utilisées.</p>
+
+                <div class="cache-levels">
+                    <div class="cache-card l1-bg">
+                        <h4>Cache L1 (Level 1)</h4>
+                        <p><strong>Emplacement :</strong> Intégré dans chaque cœur du CPU</p>
+                        <p><strong>Taille :</strong> 32-64 KB par cœur</p>
+                        <p><strong>Vitesse :</strong> 3-4 cycles (~1 ns)</p>
+                        <p><strong>Type :</strong> Divisé en cache d'instructions (I-cache) et cache de données (D-cache)</p>
+                        <p><strong>Usage :</strong> Données et instructions les plus critiques</p>
+                    </div>
+
+                    <div class="cache-card l2-bg">
+                        <h4>Cache L2 (Level 2)</h4>
+                        <p><strong>Emplacement :</strong> Par cœur ou partagé</p>
+                        <p><strong>Taille :</strong> 256 KB - 1 MB par cœur</p>
+                        <p><strong>Vitesse :</strong> 10-20 cycles (~3-5 ns)</p>
+                        <p><strong>Type :</strong> Cache unifié (instructions + données)</p>
+                        <p><strong>Usage :</strong> Extension du L1 pour plus de données</p>
+                    </div>
+
+                    <div class="cache-card l3-bg">
+                        <h4>Cache L3 (Level 3)</h4>
+                        <p><strong>Emplacement :</strong> Partagé entre tous les cœurs</p>
+                        <p><strong>Taille :</strong> 8-64 MB (voire plus)</p>
+                        <p><strong>Vitesse :</strong> 40-75 cycles (~10-20 ns)</p>
+                        <p><strong>Type :</strong> Cache unifié partagé</p>
+                        <p><strong>Usage :</strong> Réduire les accès à la RAM lente</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>🎯 Principe de localité</h4>
+                    <p>Le cache fonctionne grâce à deux principes :</p>
+                    <ul>
+                        <li><strong>Localité temporelle :</strong> Les données récemment utilisées seront probablement réutilisées bientôt</li>
+                        <li><strong>Localité spatiale :</strong> Les données proches en mémoire seront probablement utilisées ensemble</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>La RAM (Random Access Memory)</h3>
+                <p>La <strong>mémoire vive</strong> ou RAM est la mémoire principale de l'ordinateur. Elle stocke temporairement les programmes en cours d'exécution et leurs données.</p>
+
+                <div class="ram-features">
+                    <div class="feature-card">
+                        <h4>⚡ Volatile</h4>
+                        <p>Les données sont perdues lorsque l'alimentation est coupée</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎯 Accès aléatoire</h4>
+                        <p>Toute cellule mémoire est accessible directement via son adresse</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔄 Lecture/Écriture</h4>
+                        <p>Peut être lue et modifiée à volonté</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>⏱️ Rapide</h4>
+                        <p>Temps d'accès : 10-100 ns (100-1000x plus rapide que le SSD)</p>
+                    </div>
+                </div>
+
+                <h4>Types de RAM</h4>
+                <div class="ram-types">
+                    <div class="ram-type-card">
+                        <h4>DDR SDRAM</h4>
+                        <p><strong>DDR4 :</strong> Standard actuel, 2133-3200 MHz</p>
+                        <p><strong>DDR5 :</strong> Nouvelle génération, 4800-6400 MHz+</p>
+                        <p>Chaque génération double le débit théorique</p>
+                    </div>
+
+                    <div class="ram-type-card">
+                        <h4>DIMM vs SO-DIMM</h4>
+                        <p><strong>DIMM :</strong> Ordinateurs de bureau (plus grand)</p>
+                        <p><strong>SO-DIMM :</strong> Portables (compact)</p>
+                    </div>
+                </div>
+
+                <h4>Comment ça fonctionne ?</h4>
+                <div class="ram-working">
+                    <p>La RAM est composée de millions de cellules, chacune capable de stocker un bit. Ces cellules sont organisées en :</p>
+                    <ul>
+                        <li><strong>Lignes (rows)</strong> et <strong>colonnes (columns)</strong></li>
+                        <li>Chaque cellule contient un <strong>condensateur</strong> (stocke la charge électrique = 0 ou 1) et un <strong>transistor</strong> (contrôle l'accès)</li>
+                        <li>Les condensateurs se déchargent rapidement : la mémoire doit être <strong>rafraîchie</strong> des milliers de fois par seconde</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>La ROM (Read-Only Memory)</h3>
+                <p>La <strong>mémoire morte</strong> ou ROM contient des données qui ne doivent pas être modifiées ou perdues.</p>
+
+                <div class="rom-types">
+                    <div class="rom-card">
+                        <h4>📋 ROM classique</h4>
+                        <p>Programmée en usine, non modifiable</p>
+                        <p><strong>Usage :</strong> Firmware permanent</p>
+                    </div>
+
+                    <div class="rom-card">
+                        <h4>🔄 PROM</h4>
+                        <p>Programmable une seule fois par l'utilisateur</p>
+                        <p><strong>Usage :</strong> Configuration permanente</p>
+                    </div>
+
+                    <div class="rom-card">
+                        <h4>⚡ EPROM</h4>
+                        <p>Effaçable par UV, reprogrammable</p>
+                        <p><strong>Usage :</strong> Développement de firmware</p>
+                    </div>
+
+                    <div class="rom-card">
+                        <h4>💾 EEPROM</h4>
+                        <p>Électriquement effaçable et reprogrammable</p>
+                        <p><strong>Usage :</strong> BIOS/UEFI, paramètres système</p>
+                    </div>
+
+                    <div class="rom-card">
+                        <h4>⚡ Flash</h4>
+                        <p>EEPROM moderne, rapide, haute capacité</p>
+                        <p><strong>Usage :</strong> SSD, clés USB, cartes SD, firmware</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Organisation de la mémoire</h3>
+
+                <div class="memory-organization">
+                    <h4>Adressage mémoire</h4>
+                    <p>Chaque emplacement en mémoire possède une <strong>adresse unique</strong>. Dans un système 64 bits :</p>
+                    <ul>
+                        <li>Adresses codées sur 64 bits</li>
+                        <li>Espace adressable théorique : 2^64 = 16 exaoctets</li>
+                        <li>En pratique : limité à 48 bits (256 TB) pour la plupart des CPU</li>
+                    </ul>
+
+                    <h4>Organisation de la RAM</h4>
+                    <div class="memory-layout">
+                        <div class="mem-zone kernel-zone">
+                            <strong>Espace Noyau (Kernel)</strong>
+                            <p>Système d'exploitation</p>
+                        </div>
+                        <div class="mem-zone stack-zone">
+                            <strong>Pile (Stack)</strong>
+                            <p>Variables locales, appels de fonctions</p>
+                            <p>↓ Croît vers le bas</p>
+                        </div>
+                        <div class="mem-zone free-zone">
+                            <strong>Espace libre</strong>
+                        </div>
+                        <div class="mem-zone heap-zone">
+                            <strong>Tas (Heap)</strong>
+                            <p>↑ Croît vers le haut</p>
+                            <p>Allocation dynamique</p>
+                        </div>
+                        <div class="mem-zone data-zone">
+                            <strong>Données (Data/BSS)</strong>
+                            <p>Variables globales, statiques</p>
+                        </div>
+                        <div class="mem-zone code-zone">
+                            <strong>Code (Text)</strong>
+                            <p>Instructions du programme</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Mémoire virtuelle</h3>
+                <p>La <strong>mémoire virtuelle</strong> est une technique qui permet au système d'utiliser le disque dur comme extension de la RAM.</p>
+
+                <div class="virtual-memory">
+                    <div class="vm-concept">
+                        <h4>Principe</h4>
+                        <ul>
+                            <li>Chaque processus a son propre espace d'adressage virtuel</li>
+                            <li>Le système d'exploitation traduit les adresses virtuelles en adresses physiques</li>
+                            <li>Les pages mémoire peu utilisées sont déplacées vers le disque (swap/pagefile)</li>
+                            <li>Isolation entre processus : sécurité et stabilité</li>
+                        </ul>
+                    </div>
+
+                    <div class="vm-benefits">
+                        <h4>✅ Avantages</h4>
+                        <ul>
+                            <li>Permet d'exécuter plus de programmes que la RAM physique ne le permet</li>
+                            <li>Protection : un processus ne peut pas accéder à la mémoire d'un autre</li>
+                            <li>Simplification : chaque programme voit un espace d'adressage complet</li>
+                        </ul>
+                    </div>
+
+                    <div class="vm-drawbacks">
+                        <h4>⚠️ Inconvénients</h4>
+                        <ul>
+                            <li>Performance réduite si trop de swap (thrashing)</li>
+                            <li>Complexité de gestion pour le système</li>
+                            <li>Overhead de traduction d'adresses</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Performances et optimisations</h3>
+
+                <div class="performance-tips">
+                    <div class="tip-card">
+                        <h4>💡 Plus de RAM = Mieux ?</h4>
+                        <p>Oui, jusqu'à un certain point. 8 GB = minimum pour usage courant, 16 GB = confortable, 32+ GB = professionnel/gaming.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>⚡ Double canal (Dual Channel)</h4>
+                        <p>Utiliser 2 barrettes identiques double la bande passante mémoire.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>🚀 XMP/DOCP</h4>
+                        <p>Profils d'overclocking pour RAM haute performance (activer dans le BIOS).</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>🎯 Latence (CAS)</h4>
+                        <p>CAS latency : temps entre la demande et la réception. Plus bas = mieux (ex: CL16, CL18).</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="comparison-table">
+                <h3>Tableau comparatif</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Vitesse</th>
+                            <th>Capacité</th>
+                            <th>Volatile</th>
+                            <th>Coût/GB</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Registres</td>
+                            <td>⚡⚡⚡⚡⚡</td>
+                            <td>~1 KB</td>
+                            <td>Oui</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Cache L1</td>
+                            <td>⚡⚡⚡⚡⚡</td>
+                            <td>32-64 KB</td>
+                            <td>Oui</td>
+                            <td>Très élevé</td>
+                        </tr>
+                        <tr>
+                            <td>Cache L2</td>
+                            <td>⚡⚡⚡⚡</td>
+                            <td>256 KB-1 MB</td>
+                            <td>Oui</td>
+                            <td>Élevé</td>
+                        </tr>
+                        <tr>
+                            <td>Cache L3</td>
+                            <td>⚡⚡⚡</td>
+                            <td>8-64 MB</td>
+                            <td>Oui</td>
+                            <td>Élevé</td>
+                        </tr>
+                        <tr>
+                            <td>RAM</td>
+                            <td>⚡⚡</td>
+                            <td>8-128 GB</td>
+                            <td>Oui</td>
+                            <td>Moyen</td>
+                        </tr>
+                        <tr>
+                            <td>SSD</td>
+                            <td>⚡</td>
+                            <td>256 GB-4 TB</td>
+                            <td>Non</td>
+                            <td>Faible</td>
+                        </tr>
+                        <tr>
+                            <td>HDD</td>
+                            <td>🐌</td>
+                            <td>1-20 TB</td>
+                            <td>Non</td>
+                            <td>Très faible</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="navigation-links">
+                <a href="cpu.html" class="nav-link-btn">← Le CPU</a>
+                <a href="stockage.html" class="nav-link-btn">Stockage →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Architecture des Ordinateurs - Site éducatif</p>
+            <p>Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

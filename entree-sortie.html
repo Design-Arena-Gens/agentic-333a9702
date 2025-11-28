@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrée/Sortie - Architecture des Ordinateurs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Architecture des Ordinateurs</h1>
+            <nav class="top-nav">
+                <a href="index.html">Accueil</a>
+                <a href="ordinateur.html">Qu'est-ce qu'un ordinateur ?</a>
+                <a href="von-neumann.html">Architecture de von Neumann</a>
+                <a href="cpu.html">Le CPU</a>
+                <a href="memoire.html">La Mémoire</a>
+                <a href="stockage.html">Stockage</a>
+                <a href="bus.html">Bus et Communication</a>
+                <a href="entree-sortie.html">Entrée/Sortie</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="side-nav">
+            <a href="index.html" class="nav-button">
+                <span class="icon">🏠</span>
+                <span>Accueil</span>
+            </a>
+            <a href="ordinateur.html" class="nav-button">
+                <span class="icon">💻</span>
+                <span>Qu'est-ce qu'un ordinateur ?</span>
+            </a>
+            <a href="von-neumann.html" class="nav-button">
+                <span class="icon">🏗️</span>
+                <span>Architecture de von Neumann</span>
+            </a>
+            <a href="cpu.html" class="nav-button">
+                <span class="icon">⚡</span>
+                <span>Le CPU</span>
+            </a>
+            <a href="memoire.html" class="nav-button">
+                <span class="icon">💾</span>
+                <span>La Mémoire</span>
+            </a>
+            <a href="stockage.html" class="nav-button">
+                <span class="icon">💿</span>
+                <span>Stockage</span>
+            </a>
+            <a href="bus.html" class="nav-button">
+                <span class="icon">🔌</span>
+                <span>Bus et Communication</span>
+            </a>
+            <a href="entree-sortie.html" class="nav-button active">
+                <span class="icon">⌨️</span>
+                <span>Entrée/Sortie</span>
+            </a>
+            <a href="contact.html" class="nav-button">
+                <span class="icon">📧</span>
+                <span>Contact</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <article class="content-article">
+            <h2>Entrée/Sortie (I/O)</h2>
+
+            <section class="content-section">
+                <h3>Introduction</h3>
+                <p>Les <strong>périphériques d'entrée/sortie</strong> (Input/Output ou I/O) permettent l'interaction entre l'ordinateur et le monde extérieur. Ils constituent l'interface entre l'utilisateur et la machine, ou entre l'ordinateur et d'autres systèmes.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Rôle principal :</strong> Les périphériques d'entrée capturent des données pour l'ordinateur, tandis que les périphériques de sortie affichent ou transmettent les résultats du traitement.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Classification des périphériques</h3>
+
+                <div class="io-categories">
+                    <div class="io-category input-cat">
+                        <h4>📥 Périphériques d'entrée</h4>
+                        <p>Permettent d'envoyer des données vers l'ordinateur</p>
+
+                        <div class="device-grid">
+                            <div class="device-item">
+                                <span class="device-icon">⌨️</span>
+                                <strong>Clavier</strong>
+                                <p>Saisie de texte et commandes</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">🖱️</span>
+                                <strong>Souris</strong>
+                                <p>Pointage et sélection</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">🎙️</span>
+                                <strong>Microphone</strong>
+                                <p>Capture audio</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">📷</span>
+                                <strong>Webcam</strong>
+                                <p>Capture vidéo</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">📊</span>
+                                <strong>Scanner</strong>
+                                <p>Numérisation documents</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">🎮</span>
+                                <strong>Manette</strong>
+                                <p>Contrôle jeux vidéo</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">👆</span>
+                                <strong>Écran tactile</strong>
+                                <p>Interaction directe</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">🖊️</span>
+                                <strong>Tablette graphique</strong>
+                                <p>Dessin numérique</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="io-category output-cat">
+                        <h4>📤 Périphériques de sortie</h4>
+                        <p>Permettent de recevoir des données de l'ordinateur</p>
+
+                        <div class="device-grid">
+                            <div class="device-item">
+                                <span class="device-icon">🖥️</span>
+                                <strong>Écran/Moniteur</strong>
+                                <p>Affichage visuel</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">🔊</span>
+                                <strong>Haut-parleurs</strong>
+                                <p>Sortie audio</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">🎧</span>
+                                <strong>Casque</strong>
+                                <p>Audio personnel</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">🖨️</span>
+                                <strong>Imprimante</strong>
+                                <p>Impression papier</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">📽️</span>
+                                <strong>Projecteur</strong>
+                                <p>Projection vidéo</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">📲</span>
+                                <strong>LED/Voyants</strong>
+                                <p>Indicateurs d'état</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="io-category bidirectional-cat">
+                        <h4>🔄 Périphériques bidirectionnels</h4>
+                        <p>Peuvent envoyer ET recevoir des données</p>
+
+                        <div class="device-grid">
+                            <div class="device-item">
+                                <span class="device-icon">💿</span>
+                                <strong>Disque dur</strong>
+                                <p>Stockage lecture/écriture</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">💾</span>
+                                <strong>Clé USB</strong>
+                                <p>Stockage portable</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">🌐</span>
+                                <strong>Carte réseau</strong>
+                                <p>Communication réseau</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">👆</span>
+                                <strong>Écran tactile</strong>
+                                <p>Affichage + interaction</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">📱</span>
+                                <strong>Smartphone</strong>
+                                <p>Communication bidirectionnelle</p>
+                            </div>
+                            <div class="device-item">
+                                <span class="device-icon">🔊</span>
+                                <strong>Casque gaming</strong>
+                                <p>Audio entrée/sortie</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Méthodes de gestion des E/S</h3>
+
+                <div class="io-methods">
+                    <div class="method-detail-card">
+                        <h4>1️⃣ E/S programmées (Polling)</h4>
+
+                        <h5>Fonctionnement</h5>
+                        <p>Le CPU vérifie régulièrement l'état du périphérique en boucle jusqu'à ce qu'il soit prêt.</p>
+
+                        <div class="code-example">
+                            <pre>while (!périphérique.estPrêt()) {
+    // Attente active (CPU occupé)
+}
+périphérique.lireDonnées();</pre>
+                        </div>
+
+                        <h5>✅ Avantages</h5>
+                        <ul>
+                            <li>Simple à implémenter</li>
+                            <li>Faible latence pour périphériques rapides</li>
+                            <li>Contrôle précis du timing</li>
+                        </ul>
+
+                        <h5>❌ Inconvénients</h5>
+                        <ul>
+                            <li>Gaspillage de temps CPU (attente active)</li>
+                            <li>Inefficace pour périphériques lents</li>
+                            <li>CPU ne peut pas faire autre chose pendant l'attente</li>
+                        </ul>
+
+                        <p><strong>Usage :</strong> Périphériques très rapides, systèmes temps réel critiques</p>
+                    </div>
+
+                    <div class="method-detail-card">
+                        <h4>2️⃣ E/S par interruptions</h4>
+
+                        <h5>Fonctionnement</h5>
+                        <p>Le périphérique envoie un signal d'interruption au CPU quand il est prêt. Le CPU peut faire autre chose en attendant.</p>
+
+                        <div class="interrupt-flow">
+                            <div class="flow-step">
+                                <strong>1.</strong> CPU lance l'opération I/O
+                            </div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-step">
+                                <strong>2.</strong> CPU continue d'autres tâches
+                            </div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-step">
+                                <strong>3.</strong> Périphérique prêt → Interruption
+                            </div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-step">
+                                <strong>4.</strong> CPU suspend la tâche en cours
+                            </div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-step">
+                                <strong>5.</strong> CPU exécute le gestionnaire d'interruption (ISR)
+                            </div>
+                            <div class="flow-arrow">↓</div>
+                            <div class="flow-step">
+                                <strong>6.</strong> CPU reprend la tâche suspendue
+                            </div>
+                        </div>
+
+                        <h5>✅ Avantages</h5>
+                        <ul>
+                            <li>CPU libre pendant l'attente</li>
+                            <li>Meilleure utilisation du CPU</li>
+                            <li>Réactivité aux événements</li>
+                        </ul>
+
+                        <h5>❌ Inconvénients</h5>
+                        <ul>
+                            <li>Overhead de changement de contexte</li>
+                            <li>Complexité accrue</li>
+                            <li>Gestion des priorités nécessaire</li>
+                        </ul>
+
+                        <p><strong>Usage :</strong> Méthode standard pour la plupart des périphériques</p>
+                    </div>
+
+                    <div class="method-detail-card">
+                        <h4>3️⃣ DMA (Direct Memory Access)</h4>
+
+                        <h5>Fonctionnement</h5>
+                        <p>Un contrôleur DMA gère le transfert de données entre le périphérique et la mémoire sans intervention continue du CPU.</p>
+
+                        <div class="dma-diagram">
+                            <div class="dma-setup">
+                                <strong>Configuration :</strong>
+                                <p>CPU configure le DMA (source, dest, taille)</p>
+                            </div>
+                            <div class="dma-transfer">
+                                <strong>Transfert :</strong>
+                                <p>Périphérique ↔ DMA ↔ Mémoire</p>
+                                <p><small>(CPU fait autre chose)</small></p>
+                            </div>
+                            <div class="dma-complete">
+                                <strong>Fin :</strong>
+                                <p>DMA envoie une interruption au CPU</p>
+                            </div>
+                        </div>
+
+                        <h5>✅ Avantages</h5>
+                        <ul>
+                            <li>CPU presque totalement libéré</li>
+                            <li>Transferts très rapides</li>
+                            <li>Idéal pour gros volumes de données</li>
+                            <li>Multitâche efficace</li>
+                        </ul>
+
+                        <h5>❌ Inconvénients</h5>
+                        <ul>
+                            <li>Matériel supplémentaire nécessaire</li>
+                            <li>Configuration plus complexe</li>
+                            <li>Partage du bus mémoire</li>
+                        </ul>
+
+                        <p><strong>Usage :</strong> Disques durs, cartes réseau, cartes son, GPU</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Techniques d'adressage des E/S</h3>
+
+                <div class="addressing-techniques">
+                    <div class="technique-card">
+                        <h4>📍 E/S isolées (Port-mapped I/O)</h4>
+                        <p>Espace d'adressage séparé pour les périphériques</p>
+
+                        <ul>
+                            <li>Instructions spéciales : IN, OUT (x86)</li>
+                            <li>Adresses distinctes de la mémoire</li>
+                            <li>Ports I/O (ex: 0x3F8 pour port série)</li>
+                        </ul>
+
+                        <div class="example-box">
+                            <strong>Exemple x86 :</strong>
+                            <code>OUT 0x3F8, AL  ; Écrire AL sur port 0x3F8</code>
+                        </div>
+
+                        <h5>✅ Avantages</h5>
+                        <ul>
+                            <li>Séparation claire mémoire/I/O</li>
+                            <li>Instructions dédiées</li>
+                        </ul>
+
+                        <h5>❌ Inconvénients</h5>
+                        <ul>
+                            <li>Jeu d'instructions spécifique requis</li>
+                            <li>Espace d'adressage limité (souvent 16 bits)</li>
+                        </ul>
+                    </div>
+
+                    <div class="technique-card">
+                        <h4>🗺️ E/S mappées en mémoire (Memory-mapped I/O)</h4>
+                        <p>Périphériques accessibles comme des zones mémoire</p>
+
+                        <ul>
+                            <li>Même espace d'adressage que la RAM</li>
+                            <li>Instructions mémoire standard (MOV, LOAD, STORE)</li>
+                            <li>Adresses réservées pour périphériques</li>
+                        </ul>
+
+                        <div class="example-box">
+                            <strong>Exemple :</strong>
+                            <code>STORE [0xB8000], value  ; Écriture en vidéo RAM</code>
+                        </div>
+
+                        <h5>✅ Avantages</h5>
+                        <ul>
+                            <li>Pas d'instructions spéciales nécessaires</li>
+                            <li>Accès flexible (toutes les instructions mémoire)</li>
+                            <li>Grand espace d'adressage</li>
+                            <li>DMA plus simple</li>
+                        </ul>
+
+                        <h5>❌ Inconvénients</h5>
+                        <ul>
+                            <li>Réduit l'espace mémoire disponible</li>
+                            <li>Peut nécessiter désactivation du cache</li>
+                        </ul>
+
+                        <p><strong>Tendance actuelle :</strong> Méthode préférée dans les systèmes modernes</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Contrôleurs et pilotes</h3>
+
+                <div class="controllers-drivers">
+                    <div class="concept-card">
+                        <h4>🎛️ Contrôleur de périphérique</h4>
+                        <p><strong>Matériel qui gère la communication avec le périphérique</strong></p>
+
+                        <h5>Rôle</h5>
+                        <ul>
+                            <li>Interface entre le bus système et le périphérique</li>
+                            <li>Convertit les signaux et protocoles</li>
+                            <li>Bufferisation des données</li>
+                            <li>Gestion des erreurs</li>
+                            <li>Génération d'interruptions</li>
+                        </ul>
+
+                        <h5>Composants typiques</h5>
+                        <ul>
+                            <li><strong>Registres de contrôle :</strong> Configuration</li>
+                            <li><strong>Registres d'état :</strong> État actuel</li>
+                            <li><strong>Buffer de données :</strong> Stockage temporaire</li>
+                            <li><strong>Logique de contrôle :</strong> Séquencement des opérations</li>
+                        </ul>
+
+                        <div class="example-box">
+                            <strong>Exemples :</strong> Contrôleur USB, contrôleur SATA, contrôleur Ethernet
+                        </div>
+                    </div>
+
+                    <div class="concept-card">
+                        <h4>💿 Pilote de périphérique (Driver)</h4>
+                        <p><strong>Logiciel qui permet au système d'exploitation de communiquer avec le matériel</strong></p>
+
+                        <h5>Rôle</h5>
+                        <ul>
+                            <li>Abstraction du matériel pour l'OS</li>
+                            <li>Traduction des requêtes de haut niveau</li>
+                            <li>Configuration du contrôleur</li>
+                            <li>Gestion des interruptions</li>
+                            <li>Gestion des erreurs et récupération</li>
+                        </ul>
+
+                        <h5>Architecture en couches</h5>
+                        <div class="layer-diagram">
+                            <div class="layer">Application</div>
+                            <div class="layer-arrow">↕️</div>
+                            <div class="layer">Système d'exploitation</div>
+                            <div class="layer-arrow">↕️</div>
+                            <div class="layer">Pilote (Driver)</div>
+                            <div class="layer-arrow">↕️</div>
+                            <div class="layer">Contrôleur</div>
+                            <div class="layer-arrow">↕️</div>
+                            <div class="layer">Périphérique</div>
+                        </div>
+
+                        <h5>Types de pilotes</h5>
+                        <ul>
+                            <li><strong>Mode noyau :</strong> Accès direct au matériel (critique)</li>
+                            <li><strong>Mode utilisateur :</strong> Moins privilégiés, plus sûrs</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Périphériques détaillés</h3>
+
+                <div class="device-details">
+                    <div class="device-detail-card">
+                        <h4>⌨️ Clavier</h4>
+
+                        <h5>Fonctionnement</h5>
+                        <p>Chaque touche possède un code (scancode). Quand une touche est pressée :</p>
+                        <ol>
+                            <li>Le microcontrôleur du clavier détecte la pression</li>
+                            <li>Il envoie le scancode via USB ou PS/2</li>
+                            <li>Le contrôleur génère une interruption</li>
+                            <li>Le pilote traduit le scancode en caractère</li>
+                        </ol>
+
+                        <h5>Types de connexion</h5>
+                        <ul>
+                            <li><strong>USB :</strong> Standard moderne</li>
+                            <li><strong>PS/2 :</strong> Ancien standard (encore sur PC gamers pour N-key rollover)</li>
+                            <li><strong>Bluetooth :</strong> Sans fil</li>
+                        </ul>
+                    </div>
+
+                    <div class="device-detail-card">
+                        <h4>🖱️ Souris</h4>
+
+                        <h5>Technologies</h5>
+                        <ul>
+                            <li><strong>Optique :</strong> LED + capteur photo (surface normale)</li>
+                            <li><strong>Laser :</strong> Précision accrue (toute surface)</li>
+                            <li><strong>Trackball :</strong> Boule rotative</li>
+                        </ul>
+
+                        <h5>Données transmises</h5>
+                        <ul>
+                            <li>Déplacement relatif (Δx, Δy)</li>
+                            <li>État des boutons (pressé/relâché)</li>
+                            <li>Molette de défilement</li>
+                            <li>Boutons additionnels (gaming)</li>
+                        </ul>
+
+                        <h5>Paramètres</h5>
+                        <ul>
+                            <li><strong>DPI (Dots Per Inch) :</strong> Sensibilité (800-25000+ pour gaming)</li>
+                            <li><strong>Taux de polling :</strong> 125-1000 Hz</li>
+                        </ul>
+                    </div>
+
+                    <div class="device-detail-card">
+                        <h4>🖥️ Écran/Moniteur</h4>
+
+                        <h5>Technologies d'affichage</h5>
+                        <ul>
+                            <li><strong>LCD (Liquid Crystal Display) :</strong>
+                                <ul>
+                                    <li>TN : Rapide, angles de vue limités</li>
+                                    <li>IPS : Excellentes couleurs, bons angles</li>
+                                    <li>VA : Bon contraste, compromis</li>
+                                </ul>
+                            </li>
+                            <li><strong>OLED :</strong> Contraste infini, couleurs vibrantes</li>
+                            <li><strong>MicroLED :</strong> Futur, améliore OLED</li>
+                        </ul>
+
+                        <h5>Caractéristiques importantes</h5>
+                        <ul>
+                            <li><strong>Résolution :</strong> 1920x1080 (FHD), 2560x1440 (QHD), 3840x2160 (4K)</li>
+                            <li><strong>Taux de rafraîchissement :</strong> 60Hz, 144Hz, 240Hz, 360Hz</li>
+                            <li><strong>Temps de réponse :</strong> 1-5 ms (important pour gaming)</li>
+                            <li><strong>HDR :</strong> Plage dynamique étendue</li>
+                        </ul>
+
+                        <h5>Connexions</h5>
+                        <ul>
+                            <li><strong>HDMI :</strong> Standard multimédia (audio + vidéo)</li>
+                            <li><strong>DisplayPort :</strong> Haute performance (meilleur pour PC)</li>
+                            <li><strong>USB-C :</strong> Tout-en-un (vidéo + données + charge)</li>
+                        </ul>
+                    </div>
+
+                    <div class="device-detail-card">
+                        <h4>🎙️ Audio (Microphone/Haut-parleurs)</h4>
+
+                        <h5>Carte son</h5>
+                        <p>Convertit entre signaux numériques et analogiques</p>
+                        <ul>
+                            <li><strong>DAC (Digital-to-Analog) :</strong> Numérique → Son</li>
+                            <li><strong>ADC (Analog-to-Digital) :</strong> Son → Numérique</li>
+                        </ul>
+
+                        <h5>Caractéristiques audio</h5>
+                        <ul>
+                            <li><strong>Échantillonnage :</strong> 44.1 kHz (CD), 48 kHz (vidéo), 96/192 kHz (pro)</li>
+                            <li><strong>Profondeur :</strong> 16 bits (CD), 24 bits (pro), 32 bits float</li>
+                            <li><strong>Canaux :</strong> Stéréo (2), 5.1, 7.1 surround</li>
+                        </ul>
+
+                        <h5>Interfaces</h5>
+                        <ul>
+                            <li><strong>Jack 3.5mm :</strong> Analogique standard</li>
+                            <li><strong>USB :</strong> Audio numérique (casques, micros)</li>
+                            <li><strong>Bluetooth :</strong> Sans fil (avec latence)</li>
+                            <li><strong>Optique/SPDIF :</strong> Numérique haute qualité</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Plug and Play (PnP)</h3>
+                <p>Technologie permettant la détection et configuration automatique des périphériques.</p>
+
+                <div class="pnp-process">
+                    <h4>Processus PnP</h4>
+                    <ol>
+                        <li><strong>Détection :</strong> Le système détecte le nouveau périphérique</li>
+                        <li><strong>Identification :</strong> Lecture du VID (Vendor ID) et PID (Product ID)</li>
+                        <li><strong>Recherche du pilote :</strong>
+                            <ul>
+                                <li>Dans le système</li>
+                                <li>Sur Windows Update</li>
+                                <li>Fourni par le périphérique lui-même</li>
+                            </ul>
+                        </li>
+                        <li><strong>Installation :</strong> Chargement du pilote en mémoire</li>
+                        <li><strong>Configuration :</strong> Attribution des ressources (IRQ, adresses, etc.)</li>
+                        <li><strong>Activation :</strong> Périphérique prêt à l'emploi</li>
+                    </ol>
+                </div>
+
+                <div class="highlight-box">
+                    <p><strong>Hot-plug :</strong> Connexion/déconnexion sans redémarrage (USB, Thunderbolt, etc.)</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Performances et optimisation</h3>
+
+                <div class="perf-tips">
+                    <div class="tip-item">
+                        <h4>⚡ Latence vs Débit</h4>
+                        <ul>
+                            <li><strong>Latence :</strong> Temps de réponse (critique pour clavier, souris)</li>
+                            <li><strong>Débit :</strong> Quantité de données/seconde (critique pour stockage, réseau)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-item">
+                        <h4>🎯 Taux de polling</h4>
+                        <p>Fréquence à laquelle l'ordinateur interroge le périphérique</p>
+                        <ul>
+                            <li>125 Hz = toutes les 8 ms</li>
+                            <li>1000 Hz = chaque ms (meilleur pour gaming)</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-item">
+                        <h4>💾 Bufferisation</h4>
+                        <p>Utilisation de mémoires tampons pour lisser les flux de données et éviter les pertes</p>
+                    </div>
+
+                    <div class="tip-item">
+                        <h4>🔄 File d'attente</h4>
+                        <p>Les requêtes I/O sont mises en file pour optimiser l'ordre de traitement (ex: elevator algorithm pour disques)</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="info-box">
+                <h4>💡 Le saviez-vous ?</h4>
+                <p>Le premier périphérique USB (1996) transférait à 1,5 Mb/s. Aujourd'hui, USB4 atteint 40 Gb/s, soit plus de 26 000 fois plus rapide ! La souris actuelle possède souvent plus de puissance de calcul que les premiers ordinateurs personnels.</p>
+            </div>
+
+            <div class="navigation-links">
+                <a href="bus.html" class="nav-link-btn">← Bus et Communication</a>
+                <a href="contact.html" class="nav-link-btn">Contact →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Architecture des Ordinateurs - Site éducatif</p>
+            <p>Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

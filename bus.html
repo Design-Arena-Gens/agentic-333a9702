@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus et Communication - Architecture des Ordinateurs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Architecture des Ordinateurs</h1>
+            <nav class="top-nav">
+                <a href="index.html">Accueil</a>
+                <a href="ordinateur.html">Qu'est-ce qu'un ordinateur ?</a>
+                <a href="von-neumann.html">Architecture de von Neumann</a>
+                <a href="cpu.html">Le CPU</a>
+                <a href="memoire.html">La Mémoire</a>
+                <a href="stockage.html">Stockage</a>
+                <a href="bus.html">Bus et Communication</a>
+                <a href="entree-sortie.html">Entrée/Sortie</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="side-nav">
+            <a href="index.html" class="nav-button">
+                <span class="icon">🏠</span>
+                <span>Accueil</span>
+            </a>
+            <a href="ordinateur.html" class="nav-button">
+                <span class="icon">💻</span>
+                <span>Qu'est-ce qu'un ordinateur ?</span>
+            </a>
+            <a href="von-neumann.html" class="nav-button">
+                <span class="icon">🏗️</span>
+                <span>Architecture de von Neumann</span>
+            </a>
+            <a href="cpu.html" class="nav-button">
+                <span class="icon">⚡</span>
+                <span>Le CPU</span>
+            </a>
+            <a href="memoire.html" class="nav-button">
+                <span class="icon">💾</span>
+                <span>La Mémoire</span>
+            </a>
+            <a href="stockage.html" class="nav-button">
+                <span class="icon">💿</span>
+                <span>Stockage</span>
+            </a>
+            <a href="bus.html" class="nav-button active">
+                <span class="icon">🔌</span>
+                <span>Bus et Communication</span>
+            </a>
+            <a href="entree-sortie.html" class="nav-button">
+                <span class="icon">⌨️</span>
+                <span>Entrée/Sortie</span>
+            </a>
+            <a href="contact.html" class="nav-button">
+                <span class="icon">📧</span>
+                <span>Contact</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <article class="content-article">
+            <h2>Bus et Communication</h2>
+
+            <section class="content-section">
+                <h3>Qu'est-ce qu'un bus ?</h3>
+                <p>Un <strong>bus</strong> est un système de communication qui transfert des données entre les différents composants d'un ordinateur. C'est l'équivalent d'une autoroute sur laquelle circulent les informations : données, adresses et signaux de contrôle.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Définition :</strong> Un bus est un ensemble de lignes (fils) de communication parallèles permettant le transfert simultané de plusieurs bits d'information entre les composants.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Les trois types de bus</h3>
+
+                <div class="bus-types">
+                    <div class="bus-card data-bus">
+                        <div class="bus-icon">📊</div>
+                        <h4>Bus de Données (Data Bus)</h4>
+                        <p><strong>Rôle :</strong> Transporte les données entre les composants</p>
+
+                        <div class="bus-details">
+                            <h5>Caractéristiques</h5>
+                            <ul>
+                                <li><strong>Direction :</strong> Bidirectionnel (lecture et écriture)</li>
+                                <li><strong>Largeur :</strong> 8, 16, 32, 64 bits (ou plus)</li>
+                                <li><strong>Fonction :</strong> Transfère les données réelles (nombres, instructions, texte)</li>
+                            </ul>
+
+                            <h5>Exemple</h5>
+                            <p>Sur un système 64 bits, le bus de données peut transférer 8 octets simultanément.</p>
+
+                            <div class="example-box">
+                                <p><strong>Calcul :</strong> Bus 64 bits à 3 GHz = 24 GB/s de débit théorique</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bus-card address-bus">
+                        <div class="bus-icon">📍</div>
+                        <h4>Bus d'Adresses (Address Bus)</h4>
+                        <p><strong>Rôle :</strong> Indique l'emplacement mémoire à lire ou écrire</p>
+
+                        <div class="bus-details">
+                            <h5>Caractéristiques</h5>
+                            <ul>
+                                <li><strong>Direction :</strong> Unidirectionnel (CPU → Mémoire/Périphériques)</li>
+                                <li><strong>Largeur :</strong> Détermine l'espace mémoire adressable</li>
+                                <li><strong>Fonction :</strong> Spécifie quelle cellule mémoire ou périphérique accéder</li>
+                            </ul>
+
+                            <h5>Calcul de capacité</h5>
+                            <div class="capacity-table">
+                                <p><strong>Bus 32 bits :</strong> 2^32 = 4 GB maximum</p>
+                                <p><strong>Bus 64 bits :</strong> 2^64 = 16 exaoctets (16 milliards de GB)</p>
+                            </div>
+
+                            <div class="example-box">
+                                <p>C'est pourquoi Windows 32 bits ne peut utiliser que 4 GB de RAM !</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bus-card control-bus">
+                        <div class="bus-icon">🎛️</div>
+                        <h4>Bus de Contrôle (Control Bus)</h4>
+                        <p><strong>Rôle :</strong> Coordonne et synchronise les opérations</p>
+
+                        <div class="bus-details">
+                            <h5>Caractéristiques</h5>
+                            <ul>
+                                <li><strong>Direction :</strong> Bidirectionnel</li>
+                                <li><strong>Fonction :</strong> Transporte les signaux de contrôle et d'état</li>
+                            </ul>
+
+                            <h5>Signaux principaux</h5>
+                            <ul>
+                                <li><strong>Clock :</strong> Signal d'horloge pour synchronisation</li>
+                                <li><strong>Read/Write :</strong> Indique lecture ou écriture</li>
+                                <li><strong>Reset :</strong> Réinitialisation du système</li>
+                                <li><strong>Interrupt :</strong> Signale une interruption</li>
+                                <li><strong>Bus request/grant :</strong> Demande d'accès au bus</li>
+                                <li><strong>Memory/IO :</strong> Distingue mémoire ou périphérique</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Hiérarchie des bus</h3>
+
+                <div class="bus-hierarchy">
+                    <div class="hierarchy-level">
+                        <h4>🔥 Bus interne CPU</h4>
+                        <p>Connecte les composants internes du processeur</p>
+                        <ul>
+                            <li>Registres ↔ UAL</li>
+                            <li>UAL ↔ Cache L1</li>
+                            <li>Très haute vitesse (GHz)</li>
+                            <li>Largeur : 64-512 bits</li>
+                        </ul>
+                    </div>
+
+                    <div class="hierarchy-arrow">↓</div>
+
+                    <div class="hierarchy-level">
+                        <h4>⚡ Bus système (FSB/QPI)</h4>
+                        <p>Connecte le CPU à la mémoire et chipset</p>
+                        <ul>
+                            <li>CPU ↔ RAM (via contrôleur mémoire)</li>
+                            <li>CPU ↔ Chipset</li>
+                            <li>Haute vitesse (1-2 GHz)</li>
+                            <li>Largeur : 64 bits</li>
+                        </ul>
+                    </div>
+
+                    <div class="hierarchy-arrow">↓</div>
+
+                    <div class="hierarchy-level">
+                        <h4>🔌 Bus d'extension (PCIe)</h4>
+                        <p>Connecte les cartes d'extension</p>
+                        <ul>
+                            <li>Carte graphique (GPU)</li>
+                            <li>SSD NVMe</li>
+                            <li>Cartes réseau/son</li>
+                            <li>Vitesse : dépend des lanes (x1, x4, x8, x16)</li>
+                        </ul>
+                    </div>
+
+                    <div class="hierarchy-arrow">↓</div>
+
+                    <div class="hierarchy-level">
+                        <h4>🐢 Bus périphérique (USB, SATA)</h4>
+                        <p>Connecte les périphériques externes</p>
+                        <ul>
+                            <li>Clavier, souris, imprimante</li>
+                            <li>Disques durs, clés USB</li>
+                            <li>Vitesse variable (lente à moyenne)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Principaux bus modernes</h3>
+
+                <div class="modern-buses">
+                    <div class="bus-detail-card pcie-card">
+                        <h4>⚡ PCIe (PCI Express)</h4>
+                        <p><strong>Peripheral Component Interconnect Express</strong></p>
+
+                        <h5>Caractéristiques</h5>
+                        <ul>
+                            <li>Bus série point-à-point (pas de partage)</li>
+                            <li>Connexions appelées "lanes" (x1, x4, x8, x16)</li>
+                            <li>Chaque lane = communication bidirectionnelle</li>
+                        </ul>
+
+                        <h5>Versions et débits</h5>
+                        <div class="speed-table">
+                            <div class="speed-row">
+                                <span class="version">PCIe 3.0 x16:</span>
+                                <span class="speed">~16 GB/s</span>
+                            </div>
+                            <div class="speed-row">
+                                <span class="version">PCIe 4.0 x16:</span>
+                                <span class="speed">~32 GB/s</span>
+                            </div>
+                            <div class="speed-row">
+                                <span class="version">PCIe 5.0 x16:</span>
+                                <span class="speed">~64 GB/s</span>
+                            </div>
+                            <div class="speed-row">
+                                <span class="version">PCIe 6.0 x16:</span>
+                                <span class="speed">~128 GB/s</span>
+                            </div>
+                        </div>
+
+                        <h5>Usage</h5>
+                        <ul>
+                            <li>GPU (cartes graphiques) : x16</li>
+                            <li>SSD NVMe : x4</li>
+                            <li>Cartes réseau/WiFi : x1</li>
+                            <li>Carte son professionnelle : x1</li>
+                        </ul>
+                    </div>
+
+                    <div class="bus-detail-card usb-card">
+                        <h4>🔵 USB (Universal Serial Bus)</h4>
+                        <p><strong>Bus universel pour périphériques</strong></p>
+
+                        <h5>Évolution</h5>
+                        <div class="usb-evolution">
+                            <div class="usb-version">
+                                <strong>USB 1.1 (1998)</strong>
+                                <p>12 Mb/s - Clavier, souris</p>
+                            </div>
+                            <div class="usb-version">
+                                <strong>USB 2.0 (2000)</strong>
+                                <p>480 Mb/s (~60 MB/s) - Disques, webcams</p>
+                            </div>
+                            <div class="usb-version">
+                                <strong>USB 3.0 (2008)</strong>
+                                <p>5 Gb/s (~500 MB/s) - SSD externes</p>
+                            </div>
+                            <div class="usb-version">
+                                <strong>USB 3.1/3.2 (2013/2017)</strong>
+                                <p>10-20 Gb/s - Vidéo 4K</p>
+                            </div>
+                            <div class="usb-version">
+                                <strong>USB4 (2019)</strong>
+                                <p>40 Gb/s - Compatible Thunderbolt 3</p>
+                            </div>
+                        </div>
+
+                        <h5>Caractéristiques</h5>
+                        <ul>
+                            <li>Hot-plug (connexion à chaud)</li>
+                            <li>Alimentation électrique (5V, jusqu'à 100W avec USB-PD)</li>
+                            <li>Jusqu'à 127 périphériques en chaîne</li>
+                            <li>Plug & Play (détection automatique)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bus-detail-card sata-card">
+                        <h4>💾 SATA (Serial ATA)</h4>
+                        <p><strong>Interface pour disques de stockage</strong></p>
+
+                        <h5>Versions</h5>
+                        <ul>
+                            <li><strong>SATA I:</strong> 1,5 Gb/s (~150 MB/s)</li>
+                            <li><strong>SATA II:</strong> 3 Gb/s (~300 MB/s)</li>
+                            <li><strong>SATA III:</strong> 6 Gb/s (~600 MB/s)</li>
+                        </ul>
+
+                        <h5>Caractéristiques</h5>
+                        <ul>
+                            <li>Câbles fins et flexibles (vs ancien IDE)</li>
+                            <li>Hot-swap possible</li>
+                            <li>Longueur max : 1 mètre</li>
+                            <li>Un périphérique par port</li>
+                        </ul>
+
+                        <h5>Usage</h5>
+                        <ul>
+                            <li>Disques durs (HDD)</li>
+                            <li>SSD SATA</li>
+                            <li>Lecteurs optiques (DVD/Blu-ray)</li>
+                        </ul>
+                    </div>
+
+                    <div class="bus-detail-card other-card">
+                        <h4>🔌 Autres bus importants</h4>
+
+                        <div class="other-bus">
+                            <h5>Thunderbolt 3/4</h5>
+                            <p>40 Gb/s, USB-C, charge, vidéo, données</p>
+                        </div>
+
+                        <div class="other-bus">
+                            <h5>HDMI / DisplayPort</h5>
+                            <p>Transmission audio/vidéo numérique haute définition</p>
+                        </div>
+
+                        <div class="other-bus">
+                            <h5>Ethernet</h5>
+                            <p>Réseau : 1 Gb/s (Gigabit), 10 Gb/s, 100 Gb/s</p>
+                        </div>
+
+                        <div class="other-bus">
+                            <h5>DMI (Direct Media Interface)</h5>
+                            <p>Connecte CPU au chipset (Intel)</p>
+                        </div>
+
+                        <div class="other-bus">
+                            <h5>I2C, SPI</h5>
+                            <p>Bus bas niveau pour capteurs et composants électroniques</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Arbitrage de bus</h3>
+                <p>Lorsque plusieurs composants veulent utiliser le bus simultanément, un mécanisme d'<strong>arbitrage</strong> détermine qui a la priorité.</p>
+
+                <div class="arbitrage-methods">
+                    <div class="method-card">
+                        <h4>🎯 Arbitrage centralisé</h4>
+                        <p>Un contrôleur central (souvent le chipset) gère les requêtes</p>
+                        <ul>
+                            <li>✅ Simple à implémenter</li>
+                            <li>✅ Contrôle précis des priorités</li>
+                            <li>❌ Point de défaillance unique</li>
+                        </ul>
+                    </div>
+
+                    <div class="method-card">
+                        <h4>🔄 Arbitrage distribué</h4>
+                        <p>Chaque composant négocie l'accès</p>
+                        <ul>
+                            <li>✅ Pas de point unique de défaillance</li>
+                            <li>✅ Évolutif</li>
+                            <li>❌ Plus complexe</li>
+                        </ul>
+                    </div>
+
+                    <div class="method-card">
+                        <h4>⏱️ Techniques de priorité</h4>
+                        <ul>
+                            <li><strong>Fixe :</strong> Priorité préétablie par composant</li>
+                            <li><strong>Tournante :</strong> Chacun son tour (round-robin)</li>
+                            <li><strong>Dynamique :</strong> Priorité selon l'urgence</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>DMA (Direct Memory Access)</h3>
+                <p>Technique permettant aux périphériques de transférer des données directement vers la mémoire <strong>sans passer par le CPU</strong>.</p>
+
+                <div class="dma-explanation">
+                    <div class="dma-benefit">
+                        <h4>Sans DMA</h4>
+                        <div class="flow-diagram">
+                            <p>Disque → CPU → RAM</p>
+                            <p class="flow-desc">Le CPU gère chaque transfert (lent)</p>
+                        </div>
+                    </div>
+
+                    <div class="dma-arrow">VS</div>
+
+                    <div class="dma-benefit">
+                        <h4>Avec DMA</h4>
+                        <div class="flow-diagram">
+                            <p>Disque → RAM (direct)</p>
+                            <p class="flow-desc">Le CPU est libéré pour d'autres tâches</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dma-steps">
+                    <h4>Fonctionnement du DMA</h4>
+                    <ol>
+                        <li>Le CPU programme le contrôleur DMA (source, destination, taille)</li>
+                        <li>Le contrôleur DMA prend le contrôle du bus</li>
+                        <li>Transfert des données sans intervention du CPU</li>
+                        <li>Interruption envoyée au CPU quand le transfert est terminé</li>
+                    </ol>
+                </div>
+
+                <div class="highlight-box">
+                    <p><strong>Avantage :</strong> Libère le CPU et accélère considérablement les transferts volumineux (vidéo, audio, disques).</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Bande passante et latence</h3>
+
+                <div class="metrics-explanation">
+                    <div class="metric-card">
+                        <h4>📊 Bande passante (Bandwidth)</h4>
+                        <p><strong>Quantité de données transférables par seconde</strong></p>
+                        <ul>
+                            <li>Mesurée en bits/s (b/s) ou octets/s (B/s)</li>
+                            <li>1 GB/s = 8 Gb/s</li>
+                            <li>Plus élevée = mieux pour gros transferts</li>
+                        </ul>
+                        <div class="example-box">
+                            <strong>Exemple :</strong> PCIe 4.0 x16 = 32 GB/s de bande passante
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h4>⏱️ Latence (Latency)</h4>
+                        <p><strong>Temps de réponse entre requête et réception</strong></p>
+                        <ul>
+                            <li>Mesurée en nanosecondes (ns) ou microsecondes (µs)</li>
+                            <li>Plus faible = mieux pour petites transactions</li>
+                            <li>Critique pour applications interactives</li>
+                        </ul>
+                        <div class="example-box">
+                            <strong>Exemple :</strong> Mémoire DDR4 = ~15 ns de latence CAS
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Analogie :</strong> La bande passante est la largeur d'un tuyau, la latence est le temps qu'une goutte d'eau met à traverser ce tuyau.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Architectures de bus</h3>
+
+                <div class="architectures">
+                    <div class="arch-card">
+                        <h4>🚌 Bus partagé (Shared Bus)</h4>
+                        <p>Tous les composants connectés au même bus</p>
+                        <ul>
+                            <li>✅ Simple et économique</li>
+                            <li>❌ Goulot d'étranglement</li>
+                            <li>❌ Un seul transfert à la fois</li>
+                        </ul>
+                        <p><strong>Exemple :</strong> Architecture de von Neumann classique</p>
+                    </div>
+
+                    <div class="arch-card">
+                        <h4>🔀 Bus point-à-point</h4>
+                        <p>Connexion directe dédiée entre deux composants</p>
+                        <ul>
+                            <li>✅ Pas de contention</li>
+                            <li>✅ Bande passante complète</li>
+                            <li>✅ Performances élevées</li>
+                            <li>❌ Plus complexe et coûteux</li>
+                        </ul>
+                        <p><strong>Exemple :</strong> PCIe, QPI</p>
+                    </div>
+
+                    <div class="arch-card">
+                        <h4>🕸️ Bus hiérarchique</h4>
+                        <p>Plusieurs niveaux de bus interconnectés</p>
+                        <ul>
+                            <li>✅ Bon compromis performance/coût</li>
+                            <li>✅ Scalabilité</li>
+                            <li>⚠️ Latence variable selon niveau</li>
+                        </ul>
+                        <p><strong>Exemple :</strong> Chipset moderne (northbridge/southbridge)</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="comparison-table">
+                <h3>Comparaison des bus modernes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bus</th>
+                            <th>Débit max</th>
+                            <th>Type</th>
+                            <th>Usage principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PCIe 5.0 x16</td>
+                            <td>64 GB/s</td>
+                            <td>Série</td>
+                            <td>GPU, SSD haute performance</td>
+                        </tr>
+                        <tr>
+                            <td>USB4</td>
+                            <td>40 Gb/s (5 GB/s)</td>
+                            <td>Série</td>
+                            <td>Périphériques externes</td>
+                        </tr>
+                        <tr>
+                            <td>Thunderbolt 4</td>
+                            <td>40 Gb/s (5 GB/s)</td>
+                            <td>Série</td>
+                            <td>Tout-en-un (data, vidéo, charge)</td>
+                        </tr>
+                        <tr>
+                            <td>SATA III</td>
+                            <td>6 Gb/s (600 MB/s)</td>
+                            <td>Série</td>
+                            <td>HDD, SSD SATA</td>
+                        </tr>
+                        <tr>
+                            <td>DDR5</td>
+                            <td>~50 GB/s par module</td>
+                            <td>Parallèle</td>
+                            <td>Mémoire RAM</td>
+                        </tr>
+                        <tr>
+                            <td>USB 3.0</td>
+                            <td>5 Gb/s (500 MB/s)</td>
+                            <td>Série</td>
+                            <td>Clés USB, disques externes</td>
+                        </tr>
+                        <tr>
+                            <td>HDMI 2.1</td>
+                            <td>48 Gb/s</td>
+                            <td>Série</td>
+                            <td>Vidéo 8K, 4K@120Hz</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="navigation-links">
+                <a href="stockage.html" class="nav-link-btn">← Stockage</a>
+                <a href="entree-sortie.html" class="nav-link-btn">Entrée/Sortie →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Architecture des Ordinateurs - Site éducatif</p>
+            <p>Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

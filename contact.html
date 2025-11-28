@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Architecture des Ordinateurs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Architecture des Ordinateurs</h1>
+            <nav class="top-nav">
+                <a href="index.html">Accueil</a>
+                <a href="ordinateur.html">Qu'est-ce qu'un ordinateur ?</a>
+                <a href="von-neumann.html">Architecture de von Neumann</a>
+                <a href="cpu.html">Le CPU</a>
+                <a href="memoire.html">La Mémoire</a>
+                <a href="stockage.html">Stockage</a>
+                <a href="bus.html">Bus et Communication</a>
+                <a href="entree-sortie.html">Entrée/Sortie</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="side-nav">
+            <a href="index.html" class="nav-button">
+                <span class="icon">🏠</span>
+                <span>Accueil</span>
+            </a>
+            <a href="ordinateur.html" class="nav-button">
+                <span class="icon">💻</span>
+                <span>Qu'est-ce qu'un ordinateur ?</span>
+            </a>
+            <a href="von-neumann.html" class="nav-button">
+                <span class="icon">🏗️</span>
+                <span>Architecture de von Neumann</span>
+            </a>
+            <a href="cpu.html" class="nav-button">
+                <span class="icon">⚡</span>
+                <span>Le CPU</span>
+            </a>
+            <a href="memoire.html" class="nav-button">
+                <span class="icon">💾</span>
+                <span>La Mémoire</span>
+            </a>
+            <a href="stockage.html" class="nav-button">
+                <span class="icon">💿</span>
+                <span>Stockage</span>
+            </a>
+            <a href="bus.html" class="nav-button">
+                <span class="icon">🔌</span>
+                <span>Bus et Communication</span>
+            </a>
+            <a href="entree-sortie.html" class="nav-button">
+                <span class="icon">⌨️</span>
+                <span>Entrée/Sortie</span>
+            </a>
+            <a href="contact.html" class="nav-button active">
+                <span class="icon">📧</span>
+                <span>Contact</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <article class="content-article">
+            <h2>Contactez-nous</h2>
+
+            <section class="content-section">
+                <p>Vous avez des questions sur l'architecture des ordinateurs ? Vous souhaitez partager vos commentaires ou suggestions ? N'hésitez pas à nous contacter !</p>
+            </section>
+
+            <section class="content-section">
+                <div class="contact-container">
+                    <div class="contact-form-wrapper">
+                        <h3>Formulaire de contact</h3>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="nom">Nom <span class="required">*</span></label>
+                                <input type="text" id="nom" name="nom" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sujet">Sujet</label>
+                                <select id="sujet" name="sujet">
+                                    <option value="question">Question technique</option>
+                                    <option value="suggestion">Suggestion</option>
+                                    <option value="erreur">Signaler une erreur</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="8" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Envoyer le message</button>
+                        </form>
+
+                        <div id="formMessage" class="form-message"></div>
+                    </div>
+
+                    <div class="contact-info">
+                        <h3>Informations</h3>
+
+                        <div class="info-card">
+                            <div class="info-icon">📧</div>
+                            <h4>Email</h4>
+                            <p>contact@architecture-ordinateurs.fr</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">⏰</div>
+                            <h4>Temps de réponse</h4>
+                            <p>Nous nous efforçons de répondre sous 24-48 heures</p>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">💡</div>
+                            <h4>Avant de nous contacter</h4>
+                            <p>Pensez à consulter nos pages de contenu qui répondent peut-être déjà à votre question !</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Commentaires récents</h3>
+                <div id="commentsList" class="comments-list">
+                    <p class="loading-comments">Chargement des commentaires...</p>
+                </div>
+            </section>
+
+            <div class="faq-section">
+                <h3>Questions fréquentes</h3>
+
+                <div class="faq-item">
+                    <h4>À qui s'adresse ce site ?</h4>
+                    <p>Ce site est destiné à toute personne souhaitant comprendre le fonctionnement interne des ordinateurs, des étudiants aux professionnels en reconversion.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Le contenu est-il adapté aux débutants ?</h4>
+                    <p>Oui ! Nous avons conçu le contenu pour être accessible à tous, avec des explications progressives allant des bases aux concepts plus avancés.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Puis-je utiliser le contenu à des fins éducatives ?</h4>
+                    <p>Le contenu est destiné à un usage éducatif. Pour toute utilisation dans un cadre institutionnel, veuillez nous contacter.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Comment signaler une erreur ?</h4>
+                    <p>Utilisez le formulaire ci-dessus en sélectionnant "Signaler une erreur" comme sujet. Merci de votre aide pour améliorer la qualité du contenu !</p>
+                </div>
+            </div>
+
+            <div class="navigation-links">
+                <a href="entree-sortie.html" class="nav-link-btn">← Entrée/Sortie</a>
+                <a href="index.html" class="nav-link-btn">Retour à l'accueil</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Architecture des Ordinateurs - Site éducatif</p>
+            <p>Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

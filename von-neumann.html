@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture de von Neumann - Architecture des Ordinateurs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Architecture des Ordinateurs</h1>
+            <nav class="top-nav">
+                <a href="index.html">Accueil</a>
+                <a href="ordinateur.html">Qu'est-ce qu'un ordinateur ?</a>
+                <a href="von-neumann.html">Architecture de von Neumann</a>
+                <a href="cpu.html">Le CPU</a>
+                <a href="memoire.html">La Mémoire</a>
+                <a href="stockage.html">Stockage</a>
+                <a href="bus.html">Bus et Communication</a>
+                <a href="entree-sortie.html">Entrée/Sortie</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="side-nav">
+            <a href="index.html" class="nav-button">
+                <span class="icon">🏠</span>
+                <span>Accueil</span>
+            </a>
+            <a href="ordinateur.html" class="nav-button">
+                <span class="icon">💻</span>
+                <span>Qu'est-ce qu'un ordinateur ?</span>
+            </a>
+            <a href="von-neumann.html" class="nav-button active">
+                <span class="icon">🏗️</span>
+                <span>Architecture de von Neumann</span>
+            </a>
+            <a href="cpu.html" class="nav-button">
+                <span class="icon">⚡</span>
+                <span>Le CPU</span>
+            </a>
+            <a href="memoire.html" class="nav-button">
+                <span class="icon">💾</span>
+                <span>La Mémoire</span>
+            </a>
+            <a href="stockage.html" class="nav-button">
+                <span class="icon">💿</span>
+                <span>Stockage</span>
+            </a>
+            <a href="bus.html" class="nav-button">
+                <span class="icon">🔌</span>
+                <span>Bus et Communication</span>
+            </a>
+            <a href="entree-sortie.html" class="nav-button">
+                <span class="icon">⌨️</span>
+                <span>Entrée/Sortie</span>
+            </a>
+            <a href="contact.html" class="nav-button">
+                <span class="icon">📧</span>
+                <span>Contact</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <article class="content-article">
+            <h2>Architecture de von Neumann</h2>
+
+            <section class="content-section">
+                <h3>Introduction</h3>
+                <p>L'<strong>architecture de von Neumann</strong>, proposée par le mathématicien John von Neumann en 1945, est le modèle conceptuel qui définit la structure de base de la quasi-totalité des ordinateurs modernes. Ce modèle révolutionnaire a permis la création d'ordinateurs programmables et polyvalents.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Principe clé :</strong> Les programmes et les données sont stockés dans la même mémoire et traités de la même manière, permettant à un ordinateur d'être reprogrammé sans modification matérielle.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Les cinq composants principaux</h3>
+
+                <div class="architecture-diagram">
+                    <div class="arch-component">
+                        <div class="component-header cpu-color">
+                            <h4>🧠 Unité de Contrôle (UC)</h4>
+                        </div>
+                        <p>Dirige et coordonne toutes les opérations de l'ordinateur. Elle décode les instructions et génère les signaux de commande.</p>
+                    </div>
+
+                    <div class="arch-component">
+                        <div class="component-header alu-color">
+                            <h4>🔢 Unité Arithmétique et Logique (UAL)</h4>
+                        </div>
+                        <p>Effectue tous les calculs arithmétiques (addition, soustraction) et opérations logiques (AND, OR, NOT).</p>
+                    </div>
+
+                    <div class="arch-component">
+                        <div class="component-header memory-color">
+                            <h4>💾 Mémoire Centrale</h4>
+                        </div>
+                        <p>Stocke à la fois les programmes (instructions) et les données. Organisée en cellules adressables.</p>
+                    </div>
+
+                    <div class="arch-component">
+                        <div class="component-header io-color">
+                            <h4>⬇️ Unités d'Entrée</h4>
+                        </div>
+                        <p>Permettent d'introduire des données et des programmes dans l'ordinateur (clavier, souris, scanners).</p>
+                    </div>
+
+                    <div class="arch-component">
+                        <div class="component-header io-color">
+                            <h4>⬆️ Unités de Sortie</h4>
+                        </div>
+                        <p>Permettent de récupérer les résultats du traitement (écran, imprimante, haut-parleurs).</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Schéma de l'architecture</h3>
+                <div class="diagram-box">
+                    <div class="von-neumann-diagram">
+                        <div class="diagram-row">
+                            <div class="diagram-block io-bg">
+                                Entrée<br>⌨️ 🖱️
+                            </div>
+                            <div class="diagram-arrow">→</div>
+                            <div class="diagram-block cpu-bg">
+                                <strong>CPU</strong><br>
+                                <small>UC + UAL</small>
+                            </div>
+                            <div class="diagram-arrow">→</div>
+                            <div class="diagram-block io-bg">
+                                Sortie<br>🖥️ 🔊
+                            </div>
+                        </div>
+                        <div class="diagram-connector">↕️</div>
+                        <div class="diagram-row center">
+                            <div class="diagram-block memory-bg">
+                                <strong>Mémoire Centrale</strong><br>
+                                <small>Instructions + Données</small>
+                            </div>
+                        </div>
+                        <div class="diagram-label">
+                            <small>↔️ Bus de données, d'adresses et de contrôle ↔️</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Le cycle de von Neumann (Fetch-Decode-Execute)</h3>
+                <p>Le processeur exécute les instructions selon un cycle répétitif en trois étapes :</p>
+
+                <div class="cycle-detailed">
+                    <div class="cycle-phase">
+                        <div class="phase-number">1</div>
+                        <h4>Fetch (Recherche)</h4>
+                        <ul>
+                            <li>L'UC lit l'instruction depuis la mémoire</li>
+                            <li>L'adresse est fournie par le compteur de programme (PC)</li>
+                            <li>L'instruction est chargée dans le registre d'instruction</li>
+                            <li>Le PC est incrémenté</li>
+                        </ul>
+                    </div>
+
+                    <div class="cycle-phase">
+                        <div class="phase-number">2</div>
+                        <h4>Decode (Décodage)</h4>
+                        <ul>
+                            <li>L'UC analyse l'instruction</li>
+                            <li>Identifie l'opération à effectuer</li>
+                            <li>Détermine les opérandes nécessaires</li>
+                            <li>Prépare les circuits appropriés</li>
+                        </ul>
+                    </div>
+
+                    <div class="cycle-phase">
+                        <div class="phase-number">3</div>
+                        <h4>Execute (Exécution)</h4>
+                        <ul>
+                            <li>L'UAL ou l'UC exécute l'opération</li>
+                            <li>Les données sont lues/écrites en mémoire si nécessaire</li>
+                            <li>Le résultat est stocké</li>
+                            <li>Retour à l'étape 1</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Caractéristiques importantes</h3>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <h4>📝 Programme stocké</h4>
+                        <p>Les instructions du programme sont stockées en mémoire comme des données ordinaires, ce qui permet la programmation flexible.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h4>🔄 Traitement séquentiel</h4>
+                        <p>Les instructions sont exécutées une par une, dans l'ordre (sauf branchements).</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h4>🎯 Adressage linéaire</h4>
+                        <p>La mémoire est organisée en cellules numérotées séquentiellement, accessibles par leur adresse.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <h4>🔌 Bus partagés</h4>
+                        <p>Un seul bus relie le CPU et la mémoire, ce qui peut créer un goulot d'étranglement (bottleneck de von Neumann).</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Avantages et limitations</h3>
+
+                <div class="pros-cons">
+                    <div class="pros-box">
+                        <h4>✅ Avantages</h4>
+                        <ul>
+                            <li>Simplicité et élégance du design</li>
+                            <li>Flexibilité : facile à reprogrammer</li>
+                            <li>Économie : même mémoire pour instructions et données</li>
+                            <li>Universalité : peut exécuter n'importe quel algorithme</li>
+                        </ul>
+                    </div>
+
+                    <div class="cons-box">
+                        <h4>⚠️ Limitations</h4>
+                        <ul>
+                            <li><strong>Goulot de von Neumann :</strong> un seul bus limite le débit</li>
+                            <li>Traitement séquentiel peut être lent</li>
+                            <li>Vulnérabilité : code et données non séparés (failles de sécurité)</li>
+                            <li>Inefficace pour le traitement parallèle massif</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Évolutions et alternatives</h3>
+
+                <div class="evolution-cards">
+                    <div class="evolution-card">
+                        <h4>🔀 Architecture Harvard</h4>
+                        <p>Sépare physiquement la mémoire des instructions et des données, permettant des accès simultanés. Utilisée dans les microcontrôleurs et DSP.</p>
+                    </div>
+
+                    <div class="evolution-card">
+                        <h4>⚡ Architecture superscalaire</h4>
+                        <p>Plusieurs unités d'exécution permettent de traiter plusieurs instructions simultanément (parallélisme au niveau des instructions).</p>
+                    </div>
+
+                    <div class="evolution-card">
+                        <h4>🧮 Architectures parallèles</h4>
+                        <p>Processeurs multi-cœurs, GPU, TPU pour traitement massivement parallèle des données.</p>
+                    </div>
+
+                    <div class="evolution-card">
+                        <h4>💾 Hiérarchie mémoire</h4>
+                        <p>Caches L1, L2, L3 pour atténuer le goulot d'étranglement en accélérant les accès mémoire fréquents.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="info-box">
+                <h4>💡 Le saviez-vous ?</h4>
+                <p>Bien que l'architecture porte le nom de John von Neumann, elle a été développée en collaboration avec plusieurs scientifiques, dont J. Presper Eckert et John Mauchly. Le concept de "programme stocké" avait également été proposé indépendamment par Alan Turing.</p>
+            </div>
+
+            <div class="navigation-links">
+                <a href="ordinateur.html" class="nav-link-btn">← Qu'est-ce qu'un ordinateur ?</a>
+                <a href="cpu.html" class="nav-link-btn">Le CPU →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Architecture des Ordinateurs - Site éducatif</p>
+            <p>Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le CPU - Architecture des Ordinateurs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Architecture des Ordinateurs</h1>
+            <nav class="top-nav">
+                <a href="index.html">Accueil</a>
+                <a href="ordinateur.html">Qu'est-ce qu'un ordinateur ?</a>
+                <a href="von-neumann.html">Architecture de von Neumann</a>
+                <a href="cpu.html">Le CPU</a>
+                <a href="memoire.html">La Mémoire</a>
+                <a href="stockage.html">Stockage</a>
+                <a href="bus.html">Bus et Communication</a>
+                <a href="entree-sortie.html">Entrée/Sortie</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="side-nav">
+            <a href="index.html" class="nav-button">
+                <span class="icon">🏠</span>
+                <span>Accueil</span>
+            </a>
+            <a href="ordinateur.html" class="nav-button">
+                <span class="icon">💻</span>
+                <span>Qu'est-ce qu'un ordinateur ?</span>
+            </a>
+            <a href="von-neumann.html" class="nav-button">
+                <span class="icon">🏗️</span>
+                <span>Architecture de von Neumann</span>
+            </a>
+            <a href="cpu.html" class="nav-button active">
+                <span class="icon">⚡</span>
+                <span>Le CPU</span>
+            </a>
+            <a href="memoire.html" class="nav-button">
+                <span class="icon">💾</span>
+                <span>La Mémoire</span>
+            </a>
+            <a href="stockage.html" class="nav-button">
+                <span class="icon">💿</span>
+                <span>Stockage</span>
+            </a>
+            <a href="bus.html" class="nav-button">
+                <span class="icon">🔌</span>
+                <span>Bus et Communication</span>
+            </a>
+            <a href="entree-sortie.html" class="nav-button">
+                <span class="icon">⌨️</span>
+                <span>Entrée/Sortie</span>
+            </a>
+            <a href="contact.html" class="nav-button">
+                <span class="icon">📧</span>
+                <span>Contact</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <article class="content-article">
+            <h2>Le Processeur (CPU)</h2>
+
+            <section class="content-section">
+                <h3>Qu'est-ce que le CPU ?</h3>
+                <p>Le <strong>CPU (Central Processing Unit)</strong> ou processeur est le cerveau de l'ordinateur. C'est lui qui exécute les instructions des programmes, effectue les calculs et coordonne les opérations de tous les autres composants. Sans CPU, un ordinateur ne serait qu'une collection de circuits inertes.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Définition :</strong> Le CPU est un circuit intégré complexe contenant des millions (voire des milliards) de transistors, capable d'exécuter des milliards d'opérations par seconde.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Composants principaux du CPU</h3>
+
+                <div class="cpu-components">
+                    <div class="cpu-component-card">
+                        <div class="component-icon">🎯</div>
+                        <h4>Unité de Contrôle (UC)</h4>
+                        <p>Dirige le flux de données et les opérations. Elle :</p>
+                        <ul>
+                            <li>Récupère les instructions de la mémoire</li>
+                            <li>Décode les instructions</li>
+                            <li>Coordonne les autres composants</li>
+                            <li>Gère le timing et la synchronisation</li>
+                        </ul>
+                    </div>
+
+                    <div class="cpu-component-card">
+                        <div class="component-icon">🔢</div>
+                        <h4>Unité Arithmétique et Logique (UAL/ALU)</h4>
+                        <p>Effectue tous les calculs et opérations logiques :</p>
+                        <ul>
+                            <li>Opérations arithmétiques : +, -, ×, ÷</li>
+                            <li>Opérations logiques : AND, OR, NOT, XOR</li>
+                            <li>Comparaisons : =, ≠, &lt;, &gt;</li>
+                            <li>Décalages binaires</li>
+                        </ul>
+                    </div>
+
+                    <div class="cpu-component-card">
+                        <div class="component-icon">📝</div>
+                        <h4>Registres</h4>
+                        <p>Mémoires ultra-rapides intégrées au CPU :</p>
+                        <ul>
+                            <li><strong>PC (Program Counter) :</strong> contient l'adresse de la prochaine instruction</li>
+                            <li><strong>IR (Instruction Register) :</strong> stocke l'instruction en cours</li>
+                            <li><strong>Accumulateur :</strong> stocke les résultats temporaires</li>
+                            <li><strong>Registres généraux :</strong> stockage temporaire de données</li>
+                        </ul>
+                    </div>
+
+                    <div class="cpu-component-card">
+                        <div class="component-icon">💾</div>
+                        <h4>Mémoire Cache</h4>
+                        <p>Mémoire rapide intégrée pour accélérer les accès :</p>
+                        <ul>
+                            <li><strong>L1 Cache :</strong> très rapide, petite (32-64 KB)</li>
+                            <li><strong>L2 Cache :</strong> rapide, moyenne (256 KB-1 MB)</li>
+                            <li><strong>L3 Cache :</strong> partagée entre cœurs (8-64 MB)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Architecture interne d'un CPU moderne</h3>
+                <div class="diagram-box">
+                    <div class="cpu-diagram">
+                        <div class="cpu-layer">
+                            <div class="cpu-block cache-bg">
+                                <strong>Cache L1</strong><br>
+                                <small>Instructions + Données</small>
+                            </div>
+                        </div>
+                        <div class="cpu-layer">
+                            <div class="cpu-block ctrl-bg">Unité de Contrôle</div>
+                            <div class="cpu-block alu-bg">UAL/ALU</div>
+                            <div class="cpu-block reg-bg">Registres</div>
+                        </div>
+                        <div class="cpu-layer">
+                            <div class="cpu-block cache-bg">
+                                <strong>Cache L2</strong>
+                            </div>
+                        </div>
+                        <div class="cpu-layer">
+                            <div class="cpu-block cache-bg wide">
+                                <strong>Cache L3 (partagé)</strong>
+                            </div>
+                        </div>
+                        <div class="cpu-arrow">↕️ Bus mémoire ↕️</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Le cycle d'instruction</h3>
+                <p>Chaque instruction est exécutée selon un cycle précis :</p>
+
+                <div class="instruction-cycle">
+                    <div class="cycle-step-detail">
+                        <div class="step-badge">1. FETCH</div>
+                        <h4>Recherche de l'instruction</h4>
+                        <ol>
+                            <li>Le PC indique l'adresse de l'instruction</li>
+                            <li>L'instruction est lue depuis la mémoire</li>
+                            <li>Elle est stockée dans le registre IR</li>
+                            <li>Le PC est incrémenté</li>
+                        </ol>
+                    </div>
+
+                    <div class="cycle-step-detail">
+                        <div class="step-badge">2. DECODE</div>
+                        <h4>Décodage de l'instruction</h4>
+                        <ol>
+                            <li>L'UC analyse l'opcode (code d'opération)</li>
+                            <li>Identifie les opérandes nécessaires</li>
+                            <li>Prépare les circuits pour l'exécution</li>
+                            <li>Active les signaux de contrôle appropriés</li>
+                        </ol>
+                    </div>
+
+                    <div class="cycle-step-detail">
+                        <div class="step-badge">3. EXECUTE</div>
+                        <h4>Exécution de l'instruction</h4>
+                        <ol>
+                            <li>L'UAL ou l'UC effectue l'opération</li>
+                            <li>Lecture/écriture en mémoire si nécessaire</li>
+                            <li>Le résultat est stocké</li>
+                            <li>Mise à jour des drapeaux (flags)</li>
+                        </ol>
+                    </div>
+
+                    <div class="cycle-step-detail">
+                        <div class="step-badge">4. STORE</div>
+                        <h4>Stockage du résultat</h4>
+                        <ol>
+                            <li>Le résultat est écrit dans un registre</li>
+                            <li>Ou écrit en mémoire</li>
+                            <li>Mise à jour des indicateurs d'état</li>
+                            <li>Retour à l'étape FETCH</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Caractéristiques de performance</h3>
+
+                <div class="performance-grid">
+                    <div class="perf-card">
+                        <h4>⏱️ Fréquence d'horloge</h4>
+                        <p><strong>Mesurée en GHz (gigahertz)</strong></p>
+                        <p>Indique combien de cycles le CPU peut effectuer par seconde. Un CPU à 3,5 GHz exécute 3,5 milliards de cycles par seconde.</p>
+                        <div class="example-box">
+                            <strong>Exemple :</strong> Intel Core i7 : 3,5 - 5,0 GHz
+                        </div>
+                    </div>
+
+                    <div class="perf-card">
+                        <h4>🔄 Nombre de cœurs</h4>
+                        <p><strong>Multi-core processing</strong></p>
+                        <p>Un processeur multi-cœurs contient plusieurs unités de traitement indépendantes, permettant le traitement parallèle.</p>
+                        <div class="example-box">
+                            <strong>Courant :</strong> 4, 6, 8, 16, 32 cœurs ou plus
+                        </div>
+                    </div>
+
+                    <div class="perf-card">
+                        <h4>🧵 Threads (fils d'exécution)</h4>
+                        <p><strong>Hyper-Threading / SMT</strong></p>
+                        <p>Technologie permettant à un cœur physique de gérer deux threads simultanément, améliorant l'utilisation des ressources.</p>
+                        <div class="example-box">
+                            <strong>Exemple :</strong> 8 cœurs = 16 threads
+                        </div>
+                    </div>
+
+                    <div class="perf-card">
+                        <h4>💾 Taille du cache</h4>
+                        <p><strong>Mémoire ultra-rapide</strong></p>
+                        <p>Plus le cache est grand, plus le CPU peut stocker de données fréquemment utilisées, réduisant les accès à la RAM lente.</p>
+                        <div class="example-box">
+                            <strong>Typique :</strong> L1: 64KB, L2: 512KB, L3: 16MB
+                        </div>
+                    </div>
+
+                    <div class="perf-card">
+                        <h4>🏗️ Architecture (nm)</h4>
+                        <p><strong>Finesse de gravure</strong></p>
+                        <p>Taille des transistors en nanomètres. Plus petit = plus de transistors, moins de consommation, moins de chaleur.</p>
+                        <div class="example-box">
+                            <strong>Actuel :</strong> 5nm, 7nm (futur : 3nm, 2nm)
+                        </div>
+                    </div>
+
+                    <div class="perf-card">
+                        <h4>⚡ TDP (Watts)</h4>
+                        <p><strong>Consommation thermique</strong></p>
+                        <p>Puissance thermique maximale que le système de refroidissement doit dissiper.</p>
+                        <div class="example-box">
+                            <strong>Gamme :</strong> 15W (mobile) - 250W (desktop haute perf)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Principales technologies d'optimisation</h3>
+
+                <div class="tech-cards">
+                    <div class="tech-card">
+                        <h4>🚀 Pipeline</h4>
+                        <p>Division du cycle d'instruction en étapes parallèles. Pendant qu'une instruction est exécutée, la suivante est décodée et la prochaine est récupérée.</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>🔮 Branch Prediction</h4>
+                        <p>Le CPU prédit quelle branche d'un programme sera prise (if/else) et commence à l'exécuter avant de connaître le résultat.</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>⚡ Superscalar</h4>
+                        <p>Plusieurs unités d'exécution permettent de traiter plusieurs instructions en même temps si elles sont indépendantes.</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>🎯 Out-of-Order Execution</h4>
+                        <p>Les instructions peuvent être exécutées dans un ordre différent de celui du programme pour optimiser l'utilisation des ressources.</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>📊 SIMD</h4>
+                        <p>Single Instruction Multiple Data - Une instruction traite plusieurs données simultanément (utilisé pour le multimédia, IA).</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>🔋 Dynamic Frequency Scaling</h4>
+                        <p>Le CPU ajuste automatiquement sa fréquence selon la charge de travail pour économiser l'énergie et réduire la chaleur.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Fabricants et familles de processeurs</h3>
+
+                <div class="manufacturers">
+                    <div class="manufacturer-card">
+                        <h4>🔵 Intel</h4>
+                        <ul>
+                            <li><strong>Core i3/i5/i7/i9 :</strong> Grand public et professionnel</li>
+                            <li><strong>Xeon :</strong> Serveurs et stations de travail</li>
+                            <li><strong>Pentium/Celeron :</strong> Entrée de gamme</li>
+                        </ul>
+                    </div>
+
+                    <div class="manufacturer-card">
+                        <h4>🔴 AMD</h4>
+                        <ul>
+                            <li><strong>Ryzen 3/5/7/9 :</strong> Grand public haute performance</li>
+                            <li><strong>EPYC :</strong> Serveurs</li>
+                            <li><strong>Threadripper :</strong> Stations de travail</li>
+                        </ul>
+                    </div>
+
+                    <div class="manufacturer-card">
+                        <h4>🍎 Apple</h4>
+                        <ul>
+                            <li><strong>M1/M2/M3 :</strong> Architecture ARM pour Mac</li>
+                            <li><strong>A-series :</strong> iPhone et iPad</li>
+                        </ul>
+                    </div>
+
+                    <div class="manufacturer-card">
+                        <h4>📱 ARM</h4>
+                        <ul>
+                            <li><strong>Cortex :</strong> Smartphones, tablettes</li>
+                            <li><strong>Snapdragon :</strong> Qualcomm (mobile)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="info-box">
+                <h4>💡 Le saviez-vous ?</h4>
+                <p>Le premier microprocesseur commercial, l'Intel 4004 (1971), fonctionnait à 740 kHz et contenait 2 300 transistors. Un processeur moderne comme l'AMD Ryzen 9 7950X contient plus de 13 milliards de transistors et fonctionne à 5+ GHz !</p>
+            </div>
+
+            <div class="navigation-links">
+                <a href="von-neumann.html" class="nav-link-btn">← Architecture de von Neumann</a>
+                <a href="memoire.html" class="nav-link-btn">La Mémoire →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Architecture des Ordinateurs - Site éducatif</p>
+            <p>Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

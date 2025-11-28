@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockage - Architecture des Ordinateurs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Architecture des Ordinateurs</h1>
+            <nav class="top-nav">
+                <a href="index.html">Accueil</a>
+                <a href="ordinateur.html">Qu'est-ce qu'un ordinateur ?</a>
+                <a href="von-neumann.html">Architecture de von Neumann</a>
+                <a href="cpu.html">Le CPU</a>
+                <a href="memoire.html">La Mémoire</a>
+                <a href="stockage.html">Stockage</a>
+                <a href="bus.html">Bus et Communication</a>
+                <a href="entree-sortie.html">Entrée/Sortie</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <nav class="side-nav">
+            <a href="index.html" class="nav-button">
+                <span class="icon">🏠</span>
+                <span>Accueil</span>
+            </a>
+            <a href="ordinateur.html" class="nav-button">
+                <span class="icon">💻</span>
+                <span>Qu'est-ce qu'un ordinateur ?</span>
+            </a>
+            <a href="von-neumann.html" class="nav-button">
+                <span class="icon">🏗️</span>
+                <span>Architecture de von Neumann</span>
+            </a>
+            <a href="cpu.html" class="nav-button">
+                <span class="icon">⚡</span>
+                <span>Le CPU</span>
+            </a>
+            <a href="memoire.html" class="nav-button">
+                <span class="icon">💾</span>
+                <span>La Mémoire</span>
+            </a>
+            <a href="stockage.html" class="nav-button active">
+                <span class="icon">💿</span>
+                <span>Stockage</span>
+            </a>
+            <a href="bus.html" class="nav-button">
+                <span class="icon">🔌</span>
+                <span>Bus et Communication</span>
+            </a>
+            <a href="entree-sortie.html" class="nav-button">
+                <span class="icon">⌨️</span>
+                <span>Entrée/Sortie</span>
+            </a>
+            <a href="contact.html" class="nav-button">
+                <span class="icon">📧</span>
+                <span>Contact</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <article class="content-article">
+            <h2>Stockage de Données</h2>
+
+            <section class="content-section">
+                <h3>Introduction</h3>
+                <p>Le <strong>stockage</strong> désigne les dispositifs et technologies permettant de conserver des données de façon permanente ou semi-permanente. Contrairement à la RAM qui est volatile (les données sont perdues à l'extinction), le stockage conserve les informations même sans alimentation électrique.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Rôle principal :</strong> Conserver le système d'exploitation, les programmes, les documents, photos, vidéos et tous les fichiers de l'utilisateur de manière durable.</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Types de stockage</h3>
+
+                <div class="storage-types">
+                    <div class="storage-card hdd-bg">
+                        <h3>💿 Disque dur (HDD)</h3>
+                        <h4>Hard Disk Drive</h4>
+
+                        <div class="card-content">
+                            <h5>Fonctionnement</h5>
+                            <p>Stockage magnétique sur des plateaux rotatifs. Des têtes de lecture/écriture se déplacent au-dessus des plateaux pour lire ou modifier les données.</p>
+
+                            <h5>Caractéristiques</h5>
+                            <ul>
+                                <li><strong>Capacité :</strong> 500 GB à 20 TB</li>
+                                <li><strong>Vitesse :</strong> 80-160 MB/s (SATA)</li>
+                                <li><strong>Rotation :</strong> 5400 ou 7200 RPM (tours/minute)</li>
+                                <li><strong>Latence :</strong> 5-15 ms</li>
+                                <li><strong>Durée de vie :</strong> 3-5 ans en moyenne</li>
+                                <li><strong>Prix/GB :</strong> Très économique (~0,02-0,04€/GB)</li>
+                            </ul>
+
+                            <h5>✅ Avantages</h5>
+                            <ul>
+                                <li>Grande capacité à prix abordable</li>
+                                <li>Idéal pour archivage et stockage massif</li>
+                                <li>Technologie mature et fiable</li>
+                            </ul>
+
+                            <h5>❌ Inconvénients</h5>
+                            <ul>
+                                <li>Lent comparé aux SSD</li>
+                                <li>Sensible aux chocs et vibrations</li>
+                                <li>Bruyant (bruit mécanique)</li>
+                                <li>Consommation électrique plus élevée</li>
+                                <li>Fragile (pièces mécaniques)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="storage-card ssd-bg">
+                        <h3>⚡ SSD</h3>
+                        <h4>Solid State Drive</h4>
+
+                        <div class="card-content">
+                            <h5>Fonctionnement</h5>
+                            <p>Stockage électronique sur mémoire flash (NAND). Pas de pièce mobile, tout est électronique. Les données sont stockées dans des cellules de transistors.</p>
+
+                            <h5>Caractéristiques</h5>
+                            <ul>
+                                <li><strong>Capacité :</strong> 128 GB à 8 TB</li>
+                                <li><strong>Vitesse :</strong> 500-3500 MB/s (SATA/NVMe)</li>
+                                <li><strong>Latence :</strong> 0,1 ms</li>
+                                <li><strong>Durée de vie :</strong> 5-10 ans (dépend des cycles d'écriture)</li>
+                                <li><strong>Prix/GB :</strong> Moyen (~0,10-0,20€/GB)</li>
+                            </ul>
+
+                            <h5>✅ Avantages</h5>
+                            <ul>
+                                <li>Extrêmement rapide (10-100x plus rapide que HDD)</li>
+                                <li>Silencieux (pas de pièce mécanique)</li>
+                                <li>Résistant aux chocs</li>
+                                <li>Faible consommation électrique</li>
+                                <li>Compact et léger</li>
+                                <li>Démarrage du système ultra-rapide</li>
+                            </ul>
+
+                            <h5>❌ Inconvénients</h5>
+                            <ul>
+                                <li>Plus cher au GB que HDD</li>
+                                <li>Usure progressive (cycles d'écriture limités)</li>
+                                <li>Récupération de données plus difficile en cas de panne</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="storage-card nvme-bg">
+                        <h3>🚀 NVMe SSD</h3>
+                        <h4>Non-Volatile Memory Express</h4>
+
+                        <div class="card-content">
+                            <h5>Fonctionnement</h5>
+                            <p>SSD ultra-rapide connecté via PCIe au lieu de SATA. Protocole optimisé pour la mémoire flash moderne.</p>
+
+                            <h5>Caractéristiques</h5>
+                            <ul>
+                                <li><strong>Capacité :</strong> 250 GB à 4 TB</li>
+                                <li><strong>Vitesse :</strong> 2000-7000 MB/s (Gen 3/4/5)</li>
+                                <li><strong>Latence :</strong> 0,02-0,05 ms</li>
+                                <li><strong>Format :</strong> M.2 (compact)</li>
+                                <li><strong>Prix/GB :</strong> Moyen-élevé (~0,12-0,25€/GB)</li>
+                            </ul>
+
+                            <h5>✅ Avantages</h5>
+                            <ul>
+                                <li>Vitesse exceptionnelle (jusqu'à 14x plus rapide que SATA SSD)</li>
+                                <li>Faible latence</li>
+                                <li>Format compact M.2</li>
+                                <li>Idéal pour gaming, montage vidéo, développement</li>
+                            </ul>
+
+                            <h5>❌ Inconvénients</h5>
+                            <ul>
+                                <li>Plus cher</li>
+                                <li>Peut chauffer sous charge intensive</li>
+                                <li>Nécessite un slot M.2 PCIe compatible</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Interfaces de connexion</h3>
+
+                <div class="interfaces-grid">
+                    <div class="interface-card">
+                        <h4>🔌 SATA</h4>
+                        <p><strong>Serial ATA</strong></p>
+                        <p>Interface standard pour HDD et SSD</p>
+                        <ul>
+                            <li><strong>SATA III :</strong> 6 Gb/s (~600 MB/s max)</li>
+                            <li>Câbles longs possibles</li>
+                            <li>Hot-swap (connexion à chaud)</li>
+                            <li>Technologie mature</li>
+                        </ul>
+                    </div>
+
+                    <div class="interface-card">
+                        <h4>⚡ NVMe (PCIe)</h4>
+                        <p><strong>PCI Express</strong></p>
+                        <p>Interface ultra-rapide pour SSD modernes</p>
+                        <ul>
+                            <li><strong>Gen 3 :</strong> ~3500 MB/s</li>
+                            <li><strong>Gen 4 :</strong> ~7000 MB/s</li>
+                            <li><strong>Gen 5 :</strong> ~14000 MB/s</li>
+                            <li>Format M.2 compact</li>
+                        </ul>
+                    </div>
+
+                    <div class="interface-card">
+                        <h4>🔵 USB</h4>
+                        <p><strong>Universal Serial Bus</strong></p>
+                        <p>Stockage externe portable</p>
+                        <ul>
+                            <li><strong>USB 3.0 :</strong> 5 Gb/s (~500 MB/s)</li>
+                            <li><strong>USB 3.1 :</strong> 10 Gb/s (~1 GB/s)</li>
+                            <li><strong>USB 3.2/4 :</strong> 20-40 Gb/s</li>
+                            <li>Plug & Play</li>
+                        </ul>
+                    </div>
+
+                    <div class="interface-card">
+                        <h4>⚡ Thunderbolt</h4>
+                        <p><strong>Intel/Apple</strong></p>
+                        <p>Interface très haute performance</p>
+                        <ul>
+                            <li><strong>TB3 :</strong> 40 Gb/s</li>
+                            <li><strong>TB4 :</strong> 40 Gb/s (améliorations)</li>
+                            <li>Compatible USB-C</li>
+                            <li>Chaînage possible</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Technologies de mémoire flash</h3>
+
+                <div class="flash-types">
+                    <div class="flash-card">
+                        <h4>SLC (Single-Level Cell)</h4>
+                        <p>1 bit par cellule</p>
+                        <ul>
+                            <li>✅ Très rapide</li>
+                            <li>✅ Très fiable (100K cycles)</li>
+                            <li>✅ Longue durée de vie</li>
+                            <li>❌ Très cher</li>
+                            <li>❌ Faible densité</li>
+                        </ul>
+                        <p><strong>Usage :</strong> Professionnel, serveurs</p>
+                    </div>
+
+                    <div class="flash-card">
+                        <h4>MLC (Multi-Level Cell)</h4>
+                        <p>2 bits par cellule</p>
+                        <ul>
+                            <li>✅ Rapide</li>
+                            <li>✅ Bon compromis prix/performance</li>
+                            <li>⚠️ Durée de vie correcte (10K cycles)</li>
+                            <li>⚠️ Prix moyen</li>
+                        </ul>
+                        <p><strong>Usage :</strong> Grand public haut de gamme</p>
+                    </div>
+
+                    <div class="flash-card">
+                        <h4>TLC (Triple-Level Cell)</h4>
+                        <p>3 bits par cellule</p>
+                        <ul>
+                            <li>✅ Bon rapport qualité/prix</li>
+                            <li>✅ Haute densité</li>
+                            <li>⚠️ Vitesse correcte</li>
+                            <li>⚠️ Durée de vie acceptable (3K cycles)</li>
+                        </ul>
+                        <p><strong>Usage :</strong> Grand public standard</p>
+                    </div>
+
+                    <div class="flash-card">
+                        <h4>QLC (Quad-Level Cell)</h4>
+                        <p>4 bits par cellule</p>
+                        <ul>
+                            <li>✅ Très économique</li>
+                            <li>✅ Très haute densité</li>
+                            <li>❌ Plus lent</li>
+                            <li>❌ Durée de vie limitée (1K cycles)</li>
+                        </ul>
+                        <p><strong>Usage :</strong> Stockage de masse économique</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Comparaison des performances</h3>
+
+                <div class="comparison-visual">
+                    <div class="perf-bar">
+                        <div class="bar-label">Vitesse de lecture séquentielle</div>
+                        <div class="bar-container">
+                            <div class="bar hdd-bar" style="width: 10%;">HDD: 150 MB/s</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar ssd-bar" style="width: 35%;">SSD SATA: 550 MB/s</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar nvme-bar" style="width: 60%;">NVMe Gen3: 3500 MB/s</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar nvme5-bar" style="width: 100%;">NVMe Gen4: 7000 MB/s</div>
+                        </div>
+                    </div>
+
+                    <div class="perf-bar">
+                        <div class="bar-label">Temps d'accès aléatoire</div>
+                        <div class="bar-container">
+                            <div class="bar hdd-bar-inv" style="width: 100%;">HDD: 10 ms</div>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar ssd-bar-inv" style="width: 1%;">SSD: 0.1 ms</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Autres supports de stockage</h3>
+
+                <div class="other-storage">
+                    <div class="storage-item">
+                        <h4>💾 Clé USB / Flash Drive</h4>
+                        <p>Mémoire flash portable, connexion USB</p>
+                        <ul>
+                            <li>Capacité : 8 GB - 1 TB</li>
+                            <li>Compact et pratique</li>
+                            <li>Transport de fichiers</li>
+                            <li>Performances variables</li>
+                        </ul>
+                    </div>
+
+                    <div class="storage-item">
+                        <h4>📱 Carte SD / microSD</h4>
+                        <p>Stockage pour appareils mobiles et caméras</p>
+                        <ul>
+                            <li>Capacité : 16 GB - 1 TB</li>
+                            <li>Classes de vitesse (C10, U3, V30, A2)</li>
+                            <li>Format compact</li>
+                            <li>Idéal pour photos/vidéos</li>
+                        </ul>
+                    </div>
+
+                    <div class="storage-item">
+                        <h4>💿 CD/DVD/Blu-ray</h4>
+                        <p>Stockage optique (obsolète pour beaucoup d'usages)</p>
+                        <ul>
+                            <li>CD : 700 MB</li>
+                            <li>DVD : 4,7 GB</li>
+                            <li>Blu-ray : 25-100 GB</li>
+                            <li>Durée de vie : 10-50 ans</li>
+                        </ul>
+                    </div>
+
+                    <div class="storage-item">
+                        <h4>📼 Bande magnétique</h4>
+                        <p>Archivage longue durée (entreprises)</p>
+                        <ul>
+                            <li>Capacité : jusqu'à 20 TB par cartouche</li>
+                            <li>Très économique pour archivage</li>
+                            <li>Durée de vie : 30+ ans</li>
+                            <li>Accès séquentiel (lent)</li>
+                        </ul>
+                    </div>
+
+                    <div class="storage-item">
+                        <h4>☁️ Cloud Storage</h4>
+                        <p>Stockage en ligne délocalisé</p>
+                        <ul>
+                            <li>Google Drive, OneDrive, Dropbox, iCloud</li>
+                            <li>Accessible partout</li>
+                            <li>Synchronisation automatique</li>
+                            <li>Nécessite connexion internet</li>
+                        </ul>
+                    </div>
+
+                    <div class="storage-item">
+                        <h4>🗄️ NAS (Network Attached Storage)</h4>
+                        <p>Serveur de stockage réseau personnel</p>
+                        <ul>
+                            <li>Plusieurs disques en RAID</li>
+                            <li>Accès réseau local</li>
+                            <li>Sauvegarde centralisée</li>
+                            <li>Usage familial/professionnel</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>RAID (Redundant Array of Independent Disks)</h3>
+                <p>Technologie combinant plusieurs disques pour améliorer les performances et/ou la fiabilité.</p>
+
+                <div class="raid-levels">
+                    <div class="raid-card">
+                        <h4>RAID 0 (Striping)</h4>
+                        <p>Données réparties sur plusieurs disques</p>
+                        <ul>
+                            <li>✅ Performance doublée</li>
+                            <li>✅ Capacité totale utilisée</li>
+                            <li>❌ Aucune tolérance aux pannes</li>
+                            <li>❌ Si 1 disque meurt, tout est perdu</li>
+                        </ul>
+                        <p><strong>Usage :</strong> Performance maximale (gaming, montage)</p>
+                    </div>
+
+                    <div class="raid-card">
+                        <h4>RAID 1 (Mirroring)</h4>
+                        <p>Données dupliquées sur 2 disques</p>
+                        <ul>
+                            <li>✅ Tolérance aux pannes (1 disque peut mourir)</li>
+                            <li>✅ Vitesse de lecture doublée</li>
+                            <li>❌ Capacité divisée par 2</li>
+                            <li>⚠️ Coût élevé (2 disques pour 1 de capacité)</li>
+                        </ul>
+                        <p><strong>Usage :</strong> Données critiques, serveurs</p>
+                    </div>
+
+                    <div class="raid-card">
+                        <h4>RAID 5</h4>
+                        <p>Répartition avec parité (min 3 disques)</p>
+                        <ul>
+                            <li>✅ Bon compromis performance/sécurité</li>
+                            <li>✅ Tolérance à 1 panne de disque</li>
+                            <li>✅ Capacité = (n-1) disques</li>
+                            <li>⚠️ Reconstruction lente après panne</li>
+                        </ul>
+                        <p><strong>Usage :</strong> Serveurs, NAS</p>
+                    </div>
+
+                    <div class="raid-card">
+                        <h4>RAID 10 (1+0)</h4>
+                        <p>Combinaison de RAID 1 et RAID 0</p>
+                        <ul>
+                            <li>✅ Excellente performance</li>
+                            <li>✅ Haute tolérance aux pannes</li>
+                            <li>❌ Capacité divisée par 2</li>
+                            <li>❌ Coût élevé (min 4 disques)</li>
+                        </ul>
+                        <p><strong>Usage :</strong> Serveurs haute performance</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h3>Conseils pour choisir son stockage</h3>
+
+                <div class="advice-grid">
+                    <div class="advice-card">
+                        <h4>🎮 Gaming</h4>
+                        <p><strong>Recommandé : NVMe SSD</strong></p>
+                        <ul>
+                            <li>500 GB - 1 TB NVMe pour OS et jeux</li>
+                            <li>+ 2 TB HDD pour stockage de masse</li>
+                            <li>Temps de chargement réduits</li>
+                        </ul>
+                    </div>
+
+                    <div class="advice-card">
+                        <h4>💼 Bureau/Productivité</h4>
+                        <p><strong>Recommandé : SATA SSD</strong></p>
+                        <ul>
+                            <li>256-512 GB SSD suffisant</li>
+                            <li>Boot rapide du système</li>
+                            <li>Applications réactives</li>
+                        </ul>
+                    </div>
+
+                    <div class="advice-card">
+                        <h4>🎥 Création de contenu</h4>
+                        <p><strong>Recommandé : NVMe + HDD</strong></p>
+                        <ul>
+                            <li>1-2 TB NVMe pour projets actifs</li>
+                            <li>4-8 TB HDD pour archives</li>
+                            <li>Workflow optimisé</li>
+                        </ul>
+                    </div>
+
+                    <div class="advice-card">
+                        <h4>🏠 Usage familial</h4>
+                        <p><strong>Recommandé : SSD + HDD</strong></p>
+                        <ul>
+                            <li>256 GB SSD pour système</li>
+                            <li>1-2 TB HDD pour fichiers</li>
+                            <li>Économique et pratique</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="info-box">
+                <h4>💡 Règle de sauvegarde 3-2-1</h4>
+                <p><strong>3</strong> copies de vos données importantes</p>
+                <p><strong>2</strong> supports différents (ex: SSD + disque externe)</p>
+                <p><strong>1</strong> copie hors site (cloud, autre lieu physique)</p>
+            </div>
+
+            <div class="navigation-links">
+                <a href="memoire.html" class="nav-link-btn">← La Mémoire</a>
+                <a href="bus.html" class="nav-link-btn">Bus et Communication →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Architecture des Ordinateurs - Site éducatif</p>
+            <p>Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
